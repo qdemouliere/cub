@@ -1,4 +1,4 @@
-# Tests et diagnostics DNS
+# VII - Tests et diagnostics DNS
 
 !!! Info  "Information"
     Cette partie de la documentation DNS est issue de la production [Mise en oeuvre du système DNS](https://www.reseaucerta.org/content/mise-en-oeuvre-du-dns) publiée par Frédéric Varni et Apollonie Raffalli sur le site du [réseau CERTA](https://www.reseaucerta.org/).

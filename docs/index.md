@@ -2,7 +2,7 @@
 
 ## Documentation pédagogique
 
-Bienvenue dans cette documentation pédagogique générée automatiquement à l'aide de MkDocs et hébergée sur GitHub Pages. Cette documentation a été créée dans le but de vous fournir Les informations essentielles sur le contexte commun utilisé avec vos enseignants dans les bloc 2 et 3
+Bienvenue dans cette documentation pédagogique générée automatiquement à l'aide de MkDocs et hébergée sur GitHub Pages. Cette documentation a été créée dans le but de vous fournir les informations essentielles sur le contexte commun utilisé avec vos enseignants dans les bloc 2 et 3
 du BTS SIO SISR 2.
 
 Cette production est librement inspirée de [celle](https://github.com/lmeryFulbert/SportLudique2024-2025) de Ludovic Mery, professeur d'informatique en BTS SIO au lycée Fulbert de Chartres.
@@ -30,7 +30,7 @@ Cette documentation est automatiquement mise en ligne grâce à **GitHub Pages**
 
 Il existe de nombreux outils dédiés à la documentation. Nous vous suggérons d'utiliser **mkdocs**.
 
-L'ensemble des situations auxquelles vous allez être confrontés cette année devra etre documenté avec cet outil et hebergé via github pages et un compte GitHub. Vous veuillerez à transmettre à vos enseignants l'URL de la documentation et à la publier sur votre Portfolio.
+L'ensemble des situations auxquelles vous allez être confrontés cette année devra etre documenté avec cet outil et hebergé via github pages et un compte GitHub. Vous veillerez à transmettre à vos enseignants l'URL de la documentation et à la publier sur votre Portfolio.
 
 Si vous souhaitez utiliser d'autres outils similaires à mkdocs, cela reste bien évidemment envisageable.
 

@@ -1,4 +1,4 @@
-# La résolution inverse
+# VI - La résolution inverse
 
 ## 1. Qu'est-ce que la résolution inverse ?
 
