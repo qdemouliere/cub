@@ -101,9 +101,9 @@ La ligne suivante impose l’authentification par mot de passe stocké en local 
 La dernière impose une fois l’authentification par mot de passe réussie, une deuxième authentification par OTP. Nous faisons référence au fichier contenant le (ou les) nom d’utilisateur concerné ainsi que le secret servant à générer des mots de passe à usage unique. Ce mot de passe disposera de 6 chiffres et aura une durée de validité de 30 secondes.
 
 !!! Warning  "Attention"
-    Cette configuration implique que tous les utilisateurs se connectant en SSH seront soumis à cette double authentification. Avec PAM, qui est le système d'authentification sur GNU/Linux, il est possible d'affiner ce que l'on souhaite faire et éviter que certains utilisateurs soient soumis à l'authentification par TOTP.
+    Cette configuration implique que tous les utilisateurs se connectant en SSH seront soumis à cette double authentification. Avec PAM, qui est le système d'authentification sur GNU/Linux, il est possible d'affiner ce que l'on souhaite faire et éviter que certains utilisateurs soient affectés par l'authentification TOTP.
 
-Si vous avez un utilisateur, par exemple, **adminbastion** et que vous souhaitez uniquement une simple authentification par mot de passe pour lui et un mot de passe + code à usage unique pour les autres, il faudra ajouter une ligne supplémentaire à la configuration initiale proposée pour _/etc/pam.d/sshd_.
+Si vous avez un utilisateur, par exemple, **adminbastion** et que vous souhaitez uniquement une simple authentification par mot de passe pour lui et un mot de passe + code à usage unique pour les autres, il faudra ajouter une ligne supplémentaire à la configuration initiale proposée dans _/etc/pam.d/sshd_.
 
 ```bash
 # PAM configuration for the Secure Shell service
