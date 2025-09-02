@@ -25,7 +25,7 @@ Usage: \[options\]
 
 -   taper ceci  pour redémarrer en configuration usine.
 ```Bash
-defaultconfig --f --r --p --c -L
+defaultconfig -f -r -p -c -L
 ```
 
 ### Principe de la modification de la configuration
