@@ -53,12 +53,12 @@ Le cycle standard dans Git suit trois étapes :
 Voici les commandes de base pour démarrer avec Git :  
 
 ### Initialisation et configuration
+
 ```bash
 git init           # Crée un nouveau dépôt Git
 git config --global user.name "Votre Nom"
 git config --global user.email "votre.email@example.com"
-````
-
+```
 ### Gestion des fichiers
 
 ```bash
