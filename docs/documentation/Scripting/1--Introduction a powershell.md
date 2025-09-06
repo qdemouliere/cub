@@ -34,7 +34,7 @@ En appuyant plusieurs fois, on parcourt tous les choix disponibles.
 
 Dans PowerShell, les cmdlets suivent la forme **verbe-nom** pour faciliter la mémorisation.
 
-![](../media/scripting/powershell-1.png)
+![](../../media/scripting/powershell-1.png)
 
 Exemple :
 
