@@ -13,7 +13,7 @@ Par défaut, Windows PowerShell fournit plus d’une centaine de cmdlets de base
 - Pour exécuter PowerShell en ligne de commande, saisissez :  
   ```powershell
   powershell
-```
+  ```
 
 * Pour vérifier la version de PowerShell (stockée dans une variable) :
 
