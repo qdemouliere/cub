@@ -10,7 +10,7 @@ Une de ses particularités est l’introduction des **cmdlets** (ou applets de c
 Par défaut, Windows PowerShell fournit plus d’une centaine de cmdlets de base.  
 
 ### Un premier pas…
-- Pour exécuter PowerShell en ligne de commande, saisissez :  
+* Pour exécuter PowerShell en ligne de commande, saisissez :  
   ```powershell
   powershell
   ```
@@ -20,8 +20,6 @@ Par défaut, Windows PowerShell fournit plus d’une centaine de cmdlets de base
   ```powershell
   $PSVersionTable
   ```
-
----
 
 ## II. Les commandes PowerShell ou « cmdlets »
 
