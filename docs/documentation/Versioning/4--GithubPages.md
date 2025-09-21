@@ -2,9 +2,9 @@
 
 ## 1. Qu'est-ce que Markdown ?
 
-Markdown est un langage de balisage léger créé en 2004 par John Gruber, avec l'aide d'Aaron Swartz[^1] avec l'objectif d'offrir une syntaxe, facile à lire et à écrire, en l'état, sans formatage. Markdown est principalement utilisé dans des blogs, des sites de messagerie instantanée, des forums et des pages de documentation de logiciels. Depuis quelques années, Markdown est utilisé par la communauté scientifique, en lien avec la Science ouverte.
+Markdown est un langage de balisage léger créé en 2004 par John Gruber, avec l'aide d'Aaron Swartz [^1] avec l'objectif d'offrir une syntaxe, facile à lire et à écrire, en l'état, sans formatage. Markdown est principalement utilisé dans des blogs, des sites de messagerie instantanée, des forums et des pages de documentation de logiciels. Depuis quelques années, Markdown est utilisé par la communauté scientifique, en lien avec la Science ouverte.
 
-Un document balisé par Markdown peut être converti en HTML, en PDF ou en d'autres formats.[^2]
+Un document balisé par Markdown peut être converti en HTML, en PDF ou en d'autres formats. [^2]
 
 ## 2. La syntaxe Markdown
 
@@ -219,6 +219,6 @@ Grâce à Mkdocs, vous pouvez ainsi accéder à votre site statique généré au
 Si vous possédez un nom de domaine et souhaitez disposer d'une URL customisée, GitHub vous propose cette possibilité.
 
 
-[^1] Aaron Swartz (1986-2013) était un informaticien, hacker, hacktiviste, défenseur de la culture comme bien commun de l'humanité. Il est l'un des fondateurs du site Reddit et à l'origine d'avancées majeures comme Markdown, les flux RSS, ou la licence Creative Commons. Si vous voulez en savoir plus sur sa vie, regardez le documentaire "The internet's own boy".
+[^1]: Aaron Swartz (1986-2013) était un informaticien, hacker, hacktiviste, défenseur de la culture comme bien commun de l'humanité. Il est l'un des fondateurs du site Reddit et à l'origine d'avancées majeures comme Markdown, les flux RSS, ou la licence Creative Commons. Si vous voulez en savoir plus sur sa vie, regardez le documentaire "The internet's own boy".
 
-[^2] Source : Wikipédia (https://fr.wikipedia.org/wiki/Markdown)
+[^2]: Source : Wikipédia (https://fr.wikipedia.org/wiki/Markdown)
