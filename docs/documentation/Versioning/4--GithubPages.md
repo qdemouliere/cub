@@ -24,7 +24,7 @@ Une fois votre compte GitHub créé, vous pouvez créer un nouveau répertoire p
 
 ![](../../media/mkdocs/github3.png)
 
-Une fois le répertoir créé, vous pouvez y ajouter vos collaborateurs, en l'occurrence, ceux qui participeront à la documentation avec vous. Pour cela, il faut se rendre dans **Settings** puis dans **Collaborators**.
+Une fois le répertoire créé, vous pouvez y ajouter vos collaborateurs, en l'occurrence, ceux qui participeront à la documentation avec vous. Pour cela, il faut se rendre dans **Settings** puis dans **Collaborators**.
 
 ![](../../media/mkdocs/github5.png)
 
@@ -218,6 +218,19 @@ Grâce à Mkdocs, vous pouvez ainsi accéder à votre site statique généré au
 
 Si vous possédez un nom de domaine et souhaitez disposer d'une URL customisée, GitHub vous propose cette possibilité.
 
+## 7. Travail collaboratif et documentation
+
+Plusieurs stratégies pour travailler en commun sur cette documentation sont envisageables. Les bonnes pratiques recommandent en général que chaque membre travaille sur une branche distincte de la branche principale puis que ces dernières soient fusionnées le moment venu (merge).
+
+Par simplicité, il est possible de travailler ensemble sur la branche principale **main**. Mais cela nécessite d'être rigoureux !
+
+!!! Warning  "Attention"
+    **Dès que vous voulez apporter des modifications à votre dépôt local, veillez systématiquement à obtenir la dernière version de votre dépôt distant surtout si l'un de vos collaborateurs l'a mis à jour entre temps. Si vous ne le faîtes pas, vous vous exposez à des problèmes liés à des différences de versions utilisées entre votre dépôt local et le dépôt distant.**
+
+```bash
+ cd /home/etudiant/documentations/hongkong
+ git pull
+```
 
 [^1]: Aaron Swartz (1986-2013) était un informaticien, hacker, hacktiviste, défenseur de la culture comme bien commun de l'humanité. Il est l'un des fondateurs du site Reddit et à l'origine d'avancées majeures comme Markdown, les flux RSS, ou la licence Creative Commons. Si vous voulez en savoir plus sur sa vie, regardez le documentaire "The internet's own boy".
 
