@@ -2,9 +2,9 @@
 
 ## 1. Qu'est-ce que Markdown ?
 
-Markdown est un langage de balisage léger créé en 2004 par John Gruber, avec l'aide d'Aaron Swartz[1] avec l'objectif d'offrir une syntaxe, facile à lire et à écrire, en l'état, sans formatage. Markdown est principalement utilisé dans des blogs, des sites de messagerie instantanée, des forums et des pages de documentation de logiciels. Depuis quelques années, Markdown est utilisé par la communauté scientifique, en lien avec la Science ouverte.
+Markdown est un langage de balisage léger créé en 2004 par John Gruber, avec l'aide d'Aaron Swartz[^1] avec l'objectif d'offrir une syntaxe, facile à lire et à écrire, en l'état, sans formatage. Markdown est principalement utilisé dans des blogs, des sites de messagerie instantanée, des forums et des pages de documentation de logiciels. Depuis quelques années, Markdown est utilisé par la communauté scientifique, en lien avec la Science ouverte.
 
-Un document balisé par Markdown peut être converti en HTML, en PDF ou en d'autres formats.[2]
+Un document balisé par Markdown peut être converti en HTML, en PDF ou en d'autres formats.[^2]
 
 ## 2. La syntaxe Markdown
 
@@ -24,7 +24,7 @@ Une fois votre compte GitHub créé, vous pouvez créer un nouveau répertoire p
 
 ![](../../media/mkdocs/github3.png)
 
-Une fois le répertoir créé, vous pouvez y ajouter vos collaborateurs, en l'occurrence, ceux qui participeront à la documentation.Pour cela, il faut se rendre dans **Settings** puis dans **Collaborators**.
+Une fois le répertoir créé, vous pouvez y ajouter vos collaborateurs, en l'occurrence, ceux qui participeront à la documentation avec vous. Pour cela, il faut se rendre dans **Settings** puis dans **Collaborators**.
 
 ![](../../media/mkdocs/github5.png)
 
@@ -44,22 +44,29 @@ git clone https://github.com/qdemouliere/hongkong.git
 ```bash
 ls -l 
 ```
+
+```
 ...
 drwxr-xr-x 3 etudiant etudiant  4096 21 sept. 18:18 hongkong
+```
 
-Une fois le répertoire distant cloné, vous pouvez commencer à travailler. Pour pouvoir héberger votre documentation en Markdowk sur les Github Pages avec Mkdocs, vous devrez créer l'arborescence suivante à partir de la racine (ici le répertoire: _/home/etudiant/documentations/hongkong).
+Une fois le répertoire distant cloné, vous pouvez commencer à travailler. Pour pouvoir héberger votre documentation en Markdowk sur les Github Pages avec Mkdocs, vous devrez créer l'arborescence suivante à partir de la racine (ici le répertoire: _/home/etudiant/documentations/hongkong_).
 
+```
 /home/etudiant/documentations/hongkong
                                 |_______docs
                                 |_______mkdocs.yaml
                                 |_______README.md
+```
 
 Le répertoire **docs** contiendra l'ensemble de votre documentation de votre agence. Le fichier **mkdocs.yaml** est le fichier de configuration de l'outil mkdocs, il permet de définir les paramètres de votre site et les plugins utilisés. Nous vous suggérons de vous inspirer de celui présent dans [la documentation générale CUB](https://github.com/qdemouliere/cub). Enfin le README.md permet de fournir des informations aux utilisateurs consultant le dépôt en question.
 
+```
 /home/etudiant/documentations/hongkong/docs
                                         |_____documentation
                                         |_____media
                                         |_____index.md
+```
 
 Dans le répertoire _/home/etudiant/documentations/hongkong/docs_, c'est davantage à vous de gérer la structure comme bon vous semble. Le fichier **index.md** correspond à la page principale de votre documentation. Les répertoires que vous créerez et hébergeant des fichiers **.md** serviront de menus dans la barre latérale. Enfin, nous vous suggérons la création d'un répertoire **média** contenant l'ensemble des images (JPEG, PNG) mobilisées dans vos différentes documentations. Mais libre à vous de choisir la structure la plus adaptée à votre situation.
 
@@ -212,6 +219,6 @@ Grâce à Mkdocs, vous pouvez ainsi accéder à votre site statique généré au
 Si vous possédez un nom de domaine et souhaitez disposer d'une URL customisée, GitHub vous propose cette possibilité.
 
 
-[1] Aaron Swartz (1986-2013) était un informaticien, hacker, hacktiviste, défenseur de la culture comme bien commun de l'humanité. Il est l'un des fondateurs du site Reddit et à l'origine d'avancées majeures comme Markdown, les flux RSS, ou la licence Creative Commons. Si vous voulez en savoir plus sur sa vie, regardez le documentaire "The internet's own boy".
+[^1] Aaron Swartz (1986-2013) était un informaticien, hacker, hacktiviste, défenseur de la culture comme bien commun de l'humanité. Il est l'un des fondateurs du site Reddit et à l'origine d'avancées majeures comme Markdown, les flux RSS, ou la licence Creative Commons. Si vous voulez en savoir plus sur sa vie, regardez le documentaire "The internet's own boy".
 
-[2] Source : Wikipédia (https://fr.wikipedia.org/wiki/Markdown)
+[^2] Source : Wikipédia (https://fr.wikipedia.org/wiki/Markdown)
