@@ -48,6 +48,7 @@ named-checkzone zonename filename /var/named/db.tours.tierslieux86.fr
 ```
 
 Erreurs courantes :
+
 * les nombreux ";"  des fichiers de configuration globale ;
 * les noms DNS pleinement qualifiés dans les fichiers de zone non suffixés par un point ;
 * les parenthèses mal placées de l'enregistrement SOA ;
@@ -93,10 +94,14 @@ c.dns.gandi.net.        117683  IN      A       217.70.182.20
 ;; MSG SIZE  rcvd: 187
 ```
 
-(1) La section QUESTION reprend  la requête émise.\
-(2) La section ANSWER donne la réponse à la requête.\
-(3) La section AUTHORITY donne les serveurs de noms ayant autorité sur la zone.\
-(4) La section ADDITIONAL donne les adresses IP des serveurs de noms autoritaires.\
+(1) La section QUESTION reprend  la requête émise.
+
+(2) La section ANSWER donne la réponse à la requête.
+
+(3) La section AUTHORITY donne les serveurs de noms ayant autorité sur la zone.
+
+(4) La section ADDITIONAL donne les adresses IP des serveurs de noms autoritaires.
+
 (5) La section Query time donne le temps de réponse de la requête. Cette valeur indique donc si la réponse est en cache ou pas.
 
 Pour filtrer les résultats, on peut préciser, dans la requête, les différents types de RR :

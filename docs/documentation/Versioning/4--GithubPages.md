@@ -201,7 +201,7 @@ Prévenez Git des modifications effectuées et réalisez un commit avant de refa
 ```
 
 ```bash
-    git push -u origin main
+ git push -u origin main
 ```
 
 ### 5.2 Vérification de la configuration des GitHub Pages sur GitHub
