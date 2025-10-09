@@ -191,7 +191,7 @@ Ce fichier sert à déclarer les zones que vous aurez à gérer. Votre serveur p
 	Le numéro de série ne doit jamais être choisi au hasard et **systématiquement incrémenté à chaque modification du fichier de zone**. Les guides de bonnes pratiques recommande de choisir la date du jour sous **2025090101** (année/mois/jour/id). Dans le cas d'une architecture maître-esclave si le numéro de série présent sur le maître se retrouve **décrémenté** et inférieur à celui du serveur esclave, **le transfert de zone ne se fera plus !**
 
 ```bash
-sudoedit /var/cache/bind/db. tours.tierslieux86.fr
+sudoedit /var/cache/bind/db.tours.tierslieux86.fr
 sudo chown bind:bind /var/cache/bind/db.tours.tierslieux86.fr
 ```
 
