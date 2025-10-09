@@ -123,8 +123,8 @@ sudo chown bind:bind /var/cache/bind/db.tours.tierslieux86.fr
 ## 7. Mise en place de la journalisation
 
 ```bash
-sudoedit /etc/bind.named.conf.log
-```bash
+sudoedit /etc/bind/named.conf.log
+```
 
 ```bash
 logging {
