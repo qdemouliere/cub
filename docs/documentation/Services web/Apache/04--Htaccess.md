@@ -1,4 +1,4 @@
-# Protection et paramétrage d'un site par htaccess
+# IV. Protection et paramétrage d'un site par htaccess
 
 ## 1. Principes de fonctionnement
 

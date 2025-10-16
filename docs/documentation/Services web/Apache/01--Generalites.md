@@ -1,4 +1,4 @@
-# Généralités concernant Apache 2 sous Debian GNU/Linux
+# I. Généralités concernant Apache 2 sous Debian GNU/Linux
 
 ## 1. Installation d'un serveur LAMP (Linux/Apache/MySQL/PHP)
 

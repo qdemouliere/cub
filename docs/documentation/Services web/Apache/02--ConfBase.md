@@ -1,4 +1,4 @@
-# Configuration de base de Apache sous Debian
+# II. Configuration de base de Apache sous Debian
 
 ## 1. Les paramètres de base
 
@@ -14,7 +14,7 @@ Voici une explication en détail des principaux paramètres contenus dans */etc/
 
 * **DocumentRoot /var/www/html**  fixe la racine du serveur Web, c'est-à-dire le répertoire de base où sont cherchées par défaut les pages html, lorsque l'URL ne comporte pas de chemin de répertoire.
 
-* **User apache (dans commonhttpd.conf) Group apache**. Apache doit etre démarré par root, mais par sécurité ses processus auront pour propriétaire l'utilisateur apache, sans privilège. 
+* **User www-data  Group www-data**. Apache doit etre démarré par root, mais par sécurité ses processus auront pour propriétaire l'utilisateur www-data, sans privilège. 
 
 * **ServerAdmin root@localhost**. S'il a un problème, le serveur écrit un message à cette adresse.
 
@@ -92,6 +92,7 @@ sudoedit /etc/apache2/sites-available/lapastille
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </Virtualhost>
 ```
+
 1.	La directive **ServerName** permet de définir un nom pour l’hôte, il correspond en général au nom DNS FQDN du serveur.
 
 2.	La directive **DocumentRoot** permet de définir la racine du site.
