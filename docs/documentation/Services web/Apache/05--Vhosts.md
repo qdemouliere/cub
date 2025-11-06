@@ -26,7 +26,7 @@ sudoedit /etc/apache2/sites-available/forge.conf
         ServerAlias forge.btssio.org
         ServerAdmin webmaster@btssio.org
         ErrorLog /var/log/apache2/forge.btssio.org-error_log
-        CustomLog /var/log/apache2/forge.btssio.org-access_log
+        CustomLog /var/log/apache2/forge.btssio.org-access_log combined
         DocumentRoot "/var/www/html/forge/"
         <Directory "/var/www/html/forge/">
                 Options Indexes FollowSymLinks
@@ -46,7 +46,7 @@ sudoedit /etc/apache2/sites-available/prod.conf
         ServerAlias prod.btssio.org
         ServerAdmin webmaster@btssio.org
         ErrorLog /var/log/apache2/prod.btssio.org-error_log
-        CustomLog /var/log/apache2/prod.btssio.org-access_log
+        CustomLog /var/log/apache2/prod.btssio.org-access_log combined
         DocumentRoot "/var/www/html/prod/"
         <Directory "/var/www/html/prod/">
                 Options Indexes FollowSymLinks
