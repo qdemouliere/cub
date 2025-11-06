@@ -62,4 +62,4 @@ zone "3.16.172.in-addr.arpa" {
 sudo systemctl reload bind9
 ```
 
-[^1] Source : [Cloudflare](https://www.cloudflare.com/fr-fr/learning/dns/glossary/reverse-dns/#:~:text=Une%20recherche%20DNS%20invers%C3%A9e%20est,pour%20obtenir%20une%20adresse%20IP.)
+[^1]: Source - [Cloudflare](https://www.cloudflare.com/fr-fr/learning/dns/glossary/reverse-dns/#:~:text=Une%20recherche%20DNS%20invers%C3%A9e%20est,pour%20obtenir%20une%20adresse%20IP.)
