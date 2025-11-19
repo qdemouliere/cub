@@ -42,7 +42,7 @@ Email Address []:postmaster@sisr.sioplc.fr
 !!! Warning  "Attention"
     Tout d'abord, veillez à bien comprendre précisemment ce que fait la commande openssl et les informations demandées par la suite. Enfin soyez vigilant avec la passphrase exigée pour sécuriser l'accès à la clé privée. Bien que ce paramétrage renforce nettement la sécurité en cas de compromission de cette clé, cela peut devenir un point de blocage sur des VM ou des serveurs dédiés sur lesquels vous n'avez pas accès à la séquence de démarrage de Debian. En effet, la passphrase nécessaire pour déverrouiller la clé privée est demandé lors de cette séquence, bloquant ainsi votre VM ou votre serveur tant qu'elle n'a pas été rentrée par l'administrateur.
 
-### 2.1 Exemple avec un algorithme de chiffrement à courbe elliptique
+### 2.2 Exemple avec un algorithme de chiffrement à courbe elliptique
 
 ```bash
 etudiant@web0:/etc/apache2$ cd certs/

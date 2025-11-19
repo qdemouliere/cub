@@ -23,7 +23,7 @@ Au préalable, le répertoire /etc/apache2/certs doit disposer de 3 fichiers in
 
 ```bash
 etudiant@www:/etc/apache2/certs$ ls
-docssisr.crt  docssisr.key  scopti-ac.crt
+docssisr.crt  docssisr.key  cubpki.crt
 ```
 
 ## 3. Configuration du serveur Apache2
@@ -83,4 +83,4 @@ sudo service apache2 reload
 
 Voilà le résultat dans un navigateur web :
 
-![](../../media/apache/https_browser.png)
+![](../../../media/apache/https_browser.png)
