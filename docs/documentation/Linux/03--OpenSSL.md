@@ -46,8 +46,8 @@ Email Address []:postmaster@sisr.sioplc.fr
 
 ```bash
 etudiant@web0:/etc/apache2$ cd certs/
-etudiant@web0:/etc/apache2$ openssl ecparam -name prime256v1 -genkey -noout -out docs.key
-etudiant@web0:/etc/apache2$ openssl req -new -x509 -key docs.key -out docs.crt -days 360
+etudiant@web0:/etc/apache2/certs$ openssl ecparam -name prime256v1 -genkey -noout -out docs.key
+etudiant@web0:/etc/apache2/certs$ openssl req -new -x509 -key docs.key -out docs.crt -days 360
 ```
 
 ## 3. Mise en place d’une PKI (autorité de certification) interne pour la gestion des certificats avec OpenSSL

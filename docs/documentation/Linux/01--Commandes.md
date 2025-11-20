@@ -2,7 +2,7 @@
 
 ## 1. Trouver de l’aide et obtenir de l’information
 
-### A) Sur le web à l’aide d’un navigateur**
+### A) Sur le web à l’aide d’un navigateur
 
 * [Les cahiers de l’admin Debian](https://www.debian.org/doc/manuals/debian-handbook/index.fr.html)
 
@@ -16,7 +16,7 @@
 
 * [Une IA de type LLM](https://lumo.proton.me/guest)
 
-### B) Sur le système à l’aide de commandes spécifiques**
+### B) Sur le système à l’aide de commandes spécifiques
 
 **Obtenir le manuel d’utilisation de la commande ls**
 
@@ -1254,7 +1254,7 @@ root@host-sio1:/home/etudiant# grep ssh /var/log/auth.log |wc -l
 Je cherche les lignes ou la chaîne de caractères ssh est présente dans le fichier auth.log puis je compte le nombre de ligne. Et il est possible d’obtenir des résultats extrêmement puissants, une fois le concept maîtrisé.
 
 ```bash
-root@melkor:~# cat /var/log/auth.log | grep "Failed password for root" | awk '{print $11}'| sort | uniq | mail -s Adresses IP Brute-force SSH quentin.demouliere@ac-orleans-tours.fr
+root@melkor:~# cat /var/log/auth.log | grep "Failed password for root" | awk '{print $11}'| sort | uniq | mail -s Adresses IP Brute-force SSH postmaster@cub.sioplc.fr
 ```
 
-Ce dernier exemple permet d’envoyer un mail à quentin.demouliere@ac-orleans-tours.fr ayant pour sujet  Adresses IP Brute-force SSH contenant la liste des adresses IPv4 ayant essayé de se connecter en root sur un serveur et ayant échoué.
+Ce dernier exemple permet d’envoyer un mail à postmaster@cub.sioplc.fr ayant pour sujet  Adresses IP Brute-force SSH contenant la liste des adresses IPv4 ayant essayé de se connecter en root sur un serveur et ayant échoué.

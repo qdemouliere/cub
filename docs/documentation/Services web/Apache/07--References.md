@@ -1,4 +1,4 @@
-# VII. Les ressources de références à exploiter
+# VII. Les ressources de référence à exploiter
 
 * [La documentation officielle de Apache](https://www.markdownguide.org/basic-syntax/) qui doit être votre référence principale !
 
