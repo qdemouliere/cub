@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/documentation/DNS/1--Préambule.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1--Préambule"
+              "title": "index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/documentation/DNS/1--Préambule.md",
+                "file": "docs/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour 1--Préambule"
+              "title": "Rétrolien pour index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/documentation/DNS/1--Préambule.md",
+                "file": "docs/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Liens sortants de 1--Préambule"
+              "title": "Liens sortants de index"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/documentation/DNS/1--Préambule.md",
+                "file": "docs/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de 1--Préambule"
+              "title": "Plan de index"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "55d3f1112edd11af",
   "lastOpenFiles": [
+    "docs/documentation/DNS/1--Préambule.md",
     "docs/contexte/01-presentation.md",
     "docs/contexte/02-schemas.md",
     "docs/contexte/03-infra.md",
