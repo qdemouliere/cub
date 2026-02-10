@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/contexte/01-presentation.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-presentation"
+              "title": "index"
             }
           }
         ]
@@ -186,10 +186,10 @@
   },
   "active": "55d3f1112edd11af",
   "lastOpenFiles": [
+    "docs/contexte/01-presentation.md",
     "docs/index.md",
     "README.md",
     "docs/documentation/DNS/1--Préambule.md",
-    "docs/contexte/01-presentation.md",
     "docs/contexte/02-schemas.md",
     "docs/contexte/03-infra.md",
     "docs/contexte/bonnespratiques.md"
