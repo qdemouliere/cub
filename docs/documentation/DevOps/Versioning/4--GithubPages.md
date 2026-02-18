@@ -18,15 +18,15 @@ Le net regorge de ressources pour apprendre le fonctionnement de la syntaxe Mark
 
 Une fois votre compte GitHub créé, vous pouvez créer un nouveau répertoire pour votre projet (New).
 
-![](../../media/mkdocs/github1.png)
+![](../../../media/mkdocs/github1.png)
 
-![](../../media/mkdocs/github2.png)
+![](../../../media/mkdocs/github2.png)
 
-![](../../media/mkdocs/github3.png)
+![](../../../media/mkdocs/github3.png)
 
 Une fois le répertoire créé, vous pouvez y ajouter vos collaborateurs, en l'occurrence, ceux qui participeront à la documentation avec vous. Pour cela, il faut se rendre dans **Settings** puis dans **Collaborators**.
 
-![](../../media/mkdocs/github5.png)
+![](../../../media/mkdocs/github5.png)
 
 ## 4. Récupération du dépôt créé sur GitHub comme dépôt local
 
@@ -118,11 +118,11 @@ origin	https://github.com/qdemouliere/hongkong.git (push)
 
 Pour vous créer un jeton personnel d'accès, cliquez sue votre photo de profil puis sur _Settings_. Puis cliquez dans le menu à gauche tout en bas sur _Developer Settings_. Cliquez toujours dans le menu à gauche sur  _Personal access tokens_ puis sur _Tokens (classic)_ > _Generate a new token_ > _Generate a new token (classic)_.
 
-![](../../media/mkdocs/authgithub1.png)
+![](../../../media/mkdocs/authgithub1.png)
 
-![](../../media/mkdocs/authgithub2.png)
+![](../../../media/mkdocs/authgithub2.png)
 
-![](../../media/mkdocs/authgithub3.png)
+![](../../../media/mkdocs/authgithub3.png)
 
 Le site vous demande ensuite de vous authentifier à l'aide de votre mot de passe. Puis il est nécessaire de définir les paramètres du token dont la date d'expiration. Prévoyez une date suffisamment longue au regard de votre formation (ex: 01/08/2026). Vous pouvez vous octroyer l'ensemble des authorisations. Il faut conserver précieusement ce token **dans un gestionnaire de mots de passe par exemple** puisque c'est lui qui vous sera demandé lorsque vous lancerez des commandes telles que _git push_.
 
@@ -208,13 +208,13 @@ Prévenez Git des modifications effectuées et réalisez un commit avant de refa
 
 Depuis la page de votre répertoire, cliquez sur _Settings_ puis _Pages_ dans le menu à gauche. Vérifiez que sous _Branch_, _gh_pages_ soit sélectionné. Sauvegardez les modifications si ce n'est pas le cas.
 
-![](../../media/mkdocs/mkdocs1.png)
+![](../../../media/mkdocs/mkdocs1.png)
 
 ## 6. Accès à vos GitHub Pages
 
 Grâce à Mkdocs, vous pouvez ainsi accéder à votre site statique généré automatiquement via l'URL : https://user.github.io/projet (ex: https://qdemouliere.github.io/hongkong).
 
-![](../../media/mkdocs/mkdocsfinal.png)
+![](../../../media/mkdocs/mkdocsfinal.png)
 
 Si vous possédez un nom de domaine et souhaitez disposer d'une URL customisée, GitHub vous propose cette possibilité.
 

@@ -83,4 +83,4 @@ sudo service apache2 reload
 
 Voilà le résultat dans un navigateur web :
 
-![](../../../media/apache/https_browser.png)
+![](../../../../media/apache/https_browser.png)

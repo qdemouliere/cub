@@ -8,11 +8,11 @@ Les notifications sont très importantes parce qu’elles permettent aux Adminis
 
 Par simplicité et parce que le mail reste un média professionnel privilégié, nous configurerons les notifications par e-mail et le protocole SMTP via le menu Alertes > Types de média.
 
-![](../../media/zabbix/notifications1.png)
+![](../../../media/zabbix/notifications1.png)
 
 Comme il existe de moins en moins de serveur SMTP ouvert pour l’envoi de message, je vous propose d’utiliser celui de l'un de nos prestataires avec l’utilisation d’un compte créé pour l’occasion.
 
-![](../../media/zabbix/notification-mail1.png.png)
+![](../../../media/zabbix/notification-mail1.png.png)
 
 Pour éviter de retrouver votre mail dans les SPAMS, il est conseillé de conserver les paramètres SMTP helo et adresse SMTP utilisés dans la capture d’écran ci-dessus. Les paramètres à renseigner sont les suivants :
 
@@ -34,13 +34,13 @@ Pour éviter de retrouver votre mail dans les SPAMS, il est conseillé de conser
 
 Les notifications seront envoyées à un utilisateur ou un groupe d’utilisateur. Ainsi, il est indispensable dans le cas d’un mail, de définir une adresse mail pour l’utilisateur concerné ainsi que le média utilisé et les types de notification envoyés.
 
-![](../../media/zabbix/notifications3.png)
+![](../../../media/zabbix/notifications3.png)
 
-![](../../media/zabbix/notifications4.png)
+![](../../../media/zabbix/notifications4.png)
 
-![](../../media/zabbix/notification-mail3.png)
+![](../../../media/zabbix/notification-mail3.png)
 
-![](../../media/zabbix/notifications6.png)
+![](../../../media/zabbix/notifications6.png)
 
 
 
@@ -48,15 +48,15 @@ Les notifications seront envoyées à un utilisateur ou un groupe d’utilisateu
 
 Il reste maintenant à spécifier au serveur Zabbix, que nous souhaitons envoyer une notification par mail en cas d’activation d’un déclencheur vis-à-vis d’un hôte supervisé via le menu Alertes > Actions > Actions de déclencheur.
 
-![](../../media/zabbix/notifications7.png)
+![](../../../media/zabbix/notifications7.png)
 
-![](../../media/zabbix/notifications8.png)
+![](../../../media/zabbix/notifications8.png)
 
-![](../../media/zabbix/notifications9.png)
+![](../../../media/zabbix/notifications9.png)
 
-![](../../media/zabbix/notifications10.png)
+![](../../../media/zabbix/notifications10.png)
 
-![](../../media/zabbix/notifications11.png)
+![](../../../media/zabbix/notifications11.png)
 Pour vérifier que l’envoi de notifications est pleinement opérationnel en cas d’activation d’un déclencheur, il suffit de mettre en place un test permettant de générer une alerte.
 
 

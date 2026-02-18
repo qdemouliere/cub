@@ -59,21 +59,21 @@ etudiant@zabbix:~$ zabbix_get -s 192.168.8.10 -k system.hostname --tls-connect=p
 
 ## Étape 4 - Création de l’hôte dans le serveur de supervision
 
-![](../../media/zabbix/modelehost1.png)
+![](../../../../media/zabbix/modelehost1.png)
 
-![](../../media/zabbix/modelehost1bis.png)
+![](../../../../media/zabbix/modelehost1bis.png)
 
-![](../../media/zabbix/modelehost1PSK.png)
+![](../../../../media/zabbix/modelehost1PSK.png)
 
 Comme nous avons choisi de chiffrer les communications entre l’agent et le serveur, il est indispensable de paramétrer ce chiffrement au moment de la création de l’hôte. Nous choisirons dans le cas présent un chiffrement PSK, puis définirons correctement l’identité de la clé ainsi que son contenu (à l’identique du fichier PSK créé sur l’hôte monitoré).
 
 ## Étape 5 - Supervision d'un service réseau avec l'agent Zabbix
 
-![](../../media/zabbix/services1.png)
+![](../../../../media/zabbix/services1.png)
 
-![](../../media/zabbix/services2.png)
+![](../../../../media/zabbix/services2.png)
 
-![](../../media/zabbix/services3.png)
+![](../../../../media/zabbix/services3.png)
 
 Pour superviser un service réseau après avoir ajouté au préalable un hôte monitoré via l’agent Zabbix. Il est nécessaire de créer un nouvel élément de type « Agent Zabbix » puis de sélectionner une clé correspondant à notre besoin. Une fois, l’élément correctement défini et une valeur récupérée, nous devons créer un déclencheur afin de générer une alerte en cas d’interruption du service réseau en question.
 

@@ -17,7 +17,7 @@ Windows : <https://ftdichip.com/drivers/vcp-drivers/>.
 Lancer un logiciel permettant l'accès console (Putty, Teraterm, minicom) et
 utilisant en débit **115200**.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000025D0000014EAC1DC695456B38D4.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000025D0000014EAC1DC695456B38D4.png)
 
 
 **Sur une VM :**
@@ -45,14 +45,14 @@ pare-feu SNS à des réseaux locaux.
 ??? Warning "Attention"
     **Attention au brassage !** La distinction **interne/externe** pour les interfaces permet de se protéger contre les attaques d'usurpation d'adresse IP **IPSpoofing**.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000181000000AB0B6FF05CA3F770C5.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000181000000AB0B6FF05CA3F770C5.png)
 
 Le schéma présenté ci-dessous correspond, quant à lui, à un boîtier
 SN210. Comme vous pouvez le constater, l'organisation des interfaces est
 différente de celle des machines virtuelles ou des modèles SN310 et
 supérieur.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000144000000B3B755AE71E624572F.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000144000000B3B755AE71E624572F.png)
 
 Pour initialiser le pare-feu, il faut se brancher sur l'interface **IN**.
 
@@ -76,24 +76,24 @@ interfaces, le clavier de la console, etc :
 Un premier écran propose un choix qu'il n'est pas nécessaire de valider,
 le système continue automatiquement :
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000022B0000012817CD2132593E2099.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000022B0000012817CD2132593E2099.png)
 
 Un premier redémarrage automatique est fait et la configuration continue :
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000028200000153E7C8F0AC70165624.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/100000010000028200000153E7C8F0AC70165624.png)
 
 -   Sélectionner 4 pour fr (sur le clavier le chiffre 4 sans utiliser la
     touche Maj).
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001B20000008F9EEEF4BC005643A1.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001B20000008F9EEEF4BC005643A1.png)
 
 -   Saisir un mot de passe de 8 caractères minimum avec Maj/min/chiffre/caractères spéciaux.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001E00000007D07AC8081319AB1B3.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001E00000007D07AC8081319AB1B3.png)
 
 Passons à la configuration des interfaces réseau :
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001E80000005C4C551D348B3976D8.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000001E80000005C4C551D348B3976D8.png)
 
 Même si plusieurs interfaces ont été ajoutées sur l'hyperviseur
 (Proxmox, VirtualBox ou VmWare), seulement 2 sont modifiables via
@@ -122,18 +122,18 @@ Pour ce premier démarrage
     DHCP sur le réseau sinon répondre « y » pour mettre une adresse IP
     accessible via le réseau. Par exemple :
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000586000002AA7C90B753AF3E1988.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000586000002AA7C90B753AF3E1988.png)
 
 Répondre « n » sur la dernière question, en effet il n'est pas
 recommandé d'autoriser l'administration sur votre interface **OUT**.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000005E0000000501552B9B125EF62DA.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/10000001000005E0000000501552B9B125EF62DA.png)
 
 Votre système est installé avec les valeurs rappelées ci-dessus, vous
 pouvez tester que la configuration du clavier a bien été prise en compte
 en saisissant votre login/mdp.
 
-![](../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000552000001F6C871EF2E27855EED.png)
+![](../../../media/stormshield/fiches/fiche1_initialiser_SNS/Pictures/1000000100000552000001F6C871EF2E27855EED.png)
 
 
 L'interface d'administration est accessible à l'adresse

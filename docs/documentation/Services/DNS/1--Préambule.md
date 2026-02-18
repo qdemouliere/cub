@@ -12,5 +12,5 @@ DNS est une des pierres angulaires du réseau Internet et des réseaux locaux. C
 
 ## 2. Arborescence DNS mise en oeuvre dans cette documentation
 
-![](../../media/dns/Arbo-DNS-tl.png)
+![](../../../media/dns/Arbo-DNS-tl.png)
 

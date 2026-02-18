@@ -20,7 +20,7 @@ Les ACL peuvent être appliquées sur le trafic entrant ou sortant. Il y a deux 
 
 Voici un schéma permettant de définir les différentes étapes lors de l'utilisation d'ACL sur une interface :
 
-![](../../media/Cisco/acl1.gif)
+![](../../../media/Cisco/acl1.gif)
     
 ## 2. Différence entre les ACL standards et étendues
 
