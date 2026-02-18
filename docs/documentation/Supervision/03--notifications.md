@@ -12,6 +12,8 @@ Par simplicité et parce que le mail reste un média professionnel privilégié,
 
 Comme il existe de moins en moins de serveur SMTP ouvert pour l’envoi de message, je vous propose d’utiliser celui de l'un de nos prestataires avec l’utilisation d’un compte créé pour l’occasion.
 
+![](../../media/zabbix/notification-mail1.png.png)
+
 Pour éviter de retrouver votre mail dans les SPAMS, il est conseillé de conserver les paramètres SMTP helo et adresse SMTP utilisés dans la capture d’écran ci-dessus. Les paramètres à renseigner sont les suivants :
 
 * Nom : Mail OVH SIOPLC
@@ -22,7 +24,7 @@ Pour éviter de retrouver votre mail dans les SPAMS, il est conseillé de conser
 * Courriel : Fourni par l'enseignant
 * SMTP helo : Fourni par l'enseignant
 * Sécurisation de la connexion : SSL/TLS
-* Authentification : Nom d'utilisateur et mot de passe-t-il
+* Authentification : Nom d'utilisateur et mot de passe 
 * Nom d'utilisateur : Fourni par l'enseignant
 * Mot de passe : Fourni par l'enseignant
 * Format du message : Texte brut
@@ -36,9 +38,11 @@ Les notifications seront envoyées à un utilisateur ou un groupe d’utilisateu
 
 ![](../../media/zabbix/notifications4.png)
 
-![](../../media/zabbix/notifications5.png)
+![](../../media/zabbix/notification-mail3.png)
 
 ![](../../media/zabbix/notifications6.png)
+
+
 
 ## Etape 3 - Configurer l'envoi de mail en cas d'activation d'un déclencheur
 
