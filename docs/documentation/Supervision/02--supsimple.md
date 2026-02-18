@@ -26,7 +26,7 @@ La création de ces différents objets se fait via le menu **Collecte de donnée
 ![](../../media/zabbix/hôtes3.png)
 
 !!! Warning  "Attention"
-  Même dans le cas d’une supervision simple sans agent Zabbix, ni agent SNMP, il est obligatoire d’indiquer une interface au nouvel hôte. On choisira par défaut une interface « Agent ».
+    Même dans le cas d’une supervision simple sans agent Zabbix, ni agent SNMP, il est obligatoire d’indiquer une interface au nouvel hôte. On choisira par défaut une interface « Agent ».
 
 ## Étape 3 - Créer un nouvel élément
 
