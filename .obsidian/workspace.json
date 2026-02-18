@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/documentation/Services/Supervision/04--zabbixagent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "04--zabbixagent"
             }
           }
         ]
@@ -184,14 +184,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "55d3f1112edd11af",
+  "active": "08f3011fae9d70e4",
   "lastOpenFiles": [
-    "docs/contexte/01-presentation.md",
+    "docs/documentation/Services/Supervision/03--notifications.md",
+    "docs/documentation/Services/Supervision/02--supsimple.md",
+    "docs/documentation/Services/Supervision/01--intro.md",
     "docs/index.md",
-    "README.md",
-    "docs/documentation/DNS/1--Préambule.md",
-    "docs/contexte/02-schemas.md",
-    "docs/contexte/03-infra.md",
-    "docs/contexte/bonnespratiques.md"
+    "docs/media/zabbix/trapsnmp3.png",
+    "docs/media/zabbix/trapsnmp2.png",
+    "docs/media/zabbix/trapsnmp1.png",
+    "docs/media/zabbix/surveillance-icmp.png",
+    "docs/media/zabbix/snmptrap.png",
+    "docs/media/zabbix/services3.png",
+    "docs/media/zabbix/services2.png",
+    "docs/media/zabbix/services1.png",
+    "docs/media/zabbix/notifications9.png",
+    "docs/media/zabbix/notifications8.png",
+    "docs/media/zabbix",
+    "docs/documentation/Services/Services web/Apache/07--References.md",
+    "docs/documentation/Services/Services web/Apache/06--ActivationTLS.md",
+    "docs/documentation/Services/Services web/Apache/05--Vhosts.md",
+    "docs/documentation/Services/Services web/Apache/04--Htaccess.md",
+    "docs/documentation/Services/Services web/Apache/03--Commandes.md",
+    "docs/documentation/Services/Services web/Apache/02--ConfBase.md",
+    "docs/documentation/Services/Services web/Apache/01--Generalites.md",
+    "docs/documentation/Services/Services web/Apache",
+    "docs/documentation/Services/Supervision/04--zabbixagent.md",
+    "docs/documentation/Services/DNS/7--Tests.md",
+    "docs/documentation/Services/DNS/6--Resolutioninverse.md",
+    "docs/documentation/Services/DNS/5--Delegation.md",
+    "docs/documentation/Services/DNS/4--Slave.md",
+    "docs/documentation/Services/DNS/2--Resolver.md",
+    "docs/documentation/Services/DNS/3--Autority.md",
+    "docs/documentation/Services/DNS/1--Préambule.md",
+    "docs/documentation/Services/Services web",
+    "docs/documentation/Services/Supervision",
+    "docs/documentation/Services/DNS",
+    "docs/documentation/Services",
+    "docs/documentation/Réseau/Cisco/0x--ACL.md",
+    "docs/documentation/Réseau/Cisco",
+    "docs/documentation/Réseau",
+    "docs/documentation/DevOps/Versioning/3--Etckeeper.md",
+    "docs/documentation/DevOps/Versioning/4--GithubPages.md",
+    "docs/documentation/DevOps/Versioning/2--versionning et git.md",
+    "docs/documentation/DevOps/Versioning/1--Introduction.md",
+    "docs/documentation/DevOps/Versioning",
+    "docs/documentation/DevOps",
+    "docs/documentation/Cybersécurité/Stormshield/fiche13_vpn_ipsec.md",
+    "docs/documentation/Cybersécurité/Stormshield/fiche12_vpn_openvpn.md"
   ]
 }
