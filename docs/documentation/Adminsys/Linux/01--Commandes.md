@@ -668,11 +668,11 @@ etudiant@host-sio1:~$ sudo apt autoclean
 
 **Liste des principaux fichiers de configuration des utilisateurs et groupes**
 
-![](../../media/linux/droits.png)
+![](../../../media/linux/droits.png)
 
 **Structure d’une ligne du fichier /etc/passwd**
 
-![](../../media/linux/passwd.png)
+![](../../../media/linux/passwd.png)
 
 **Types d’utilisateurs présents sur le système**
 
@@ -922,7 +922,7 @@ etudiant@host-sio1:~$ sudo chown -R prof:admin slam
 
 Le changement des permissions peut se faire par l’intermédiaire de la méthode octale ou la méthode symbolique.
 
-![](../../media/linux/permissions.png)
+![](../../../media/linux/permissions.png)
 
 \# u=propriétaire, g=groupe, o=les autres, a= tous, + pour ajouter un droit et – pour retirer un droit.
 chmod [ugoa][+-][rwx]

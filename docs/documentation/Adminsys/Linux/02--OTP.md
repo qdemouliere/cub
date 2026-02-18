@@ -8,7 +8,7 @@ HOTP (pour HMAC One Time Password) est un mécanisme d’authentification reposa
 Il se base sur HMAC. HMAC est un type de code d’authentification de message qui combine l’utilisation d’une fonction de hachage (SHA-256) avec une clé secrète dans le but de vérifier simultanément l’intégrité des données et l’authenticité du message.
 Toutefois, HOTP est susceptible de perdre la synchronisation du compteur entre le client (par exemple la clé de sécurité) et le serveur. Il peut ainsi s’avérer difficile de maintenir un compteur commun.
 
-![](../../media/linux/hotp.png)
+![](../../../media/linux/hotp.png)
 
 **TOTP**
 
@@ -17,11 +17,11 @@ Ainsi, TOTP permet la génération d’une séquence de caractères valable seul
 
 **Phase d'enregistrement**
 
-![](../../media/linux/totp1.png)
+![](../../../media/linux/totp1.png)
 
 **Phase d'authentification**
 
-![](../../media/linux/totp2.png)
+![](../../../media/linux/totp2.png)
 
 Dans le schéma ci-dessus, nous constatons que la clé secrète est commune et qu’elle a été transmise au client lors de la phase d’enregistrement. L’avantage de passer par une clé de sécurité est de pouvoir stocker cette clé secrète sur un matériel spécifique et non directement sur le smartphone ou sur l’ordinateur client.
 
@@ -30,7 +30,7 @@ Dans le schéma ci-dessus, nous constatons que la clé secrète est commune et q
 
 ## 2. Schéma de principe concernant la configuration de TOTP sur un système Debian
 
-![](../../media/linux/TOTPlinux.png)
+![](../../../media/linux/TOTPlinux.png)
 
 ## 3. Prérequis sur le smartphone et le poste client
 
