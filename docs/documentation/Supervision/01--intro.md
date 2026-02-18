@@ -1,4 +1,4 @@
-# 1. Introduction à la supervision avec Zabbix
+# I. Introduction à la supervision avec Zabbix
 
 !!! Warning  "Attention"
     Lors de toute la durée de la séquence sur la supervision avec Zabbix, vous devrez vous référer à la documentation officielle ou celle fournie par votre enseignant et non sur des tutoriels trouvés au hasard sur le Net. Il faut choisir une documentation en fonction du niveau de fiabilité de cette dernière.

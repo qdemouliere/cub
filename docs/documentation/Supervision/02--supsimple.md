@@ -1,4 +1,4 @@
-# 2. Supervision simple d’un hôte à l’aide du protocole ICMP écho
+# II. Supervision simple d’un hôte à l’aide du protocole ICMP écho
 
 La vérification la plus simple que l’on peut faire pour superviser un hôte sur le réseau est l’envoi d’un paquet ICMP écho. Si l’hôte nous répond alors la valeur retournée est 1 sinon la valeur retournée est 0. Si l’on obtient 0, il faudra alors déclencher une alerte afin de prévenir que l’hôte en question est injoignable depuis l’outil de supervision.
 
