@@ -83,5 +83,6 @@ VARBINDS:
   iso.3.6.1.4.1.9.9.41.1.2.3.1.6.55 type=67 value=Timeticks: (263818158) 30 days, 12:49:41.58
 ```
 
+![](../../../media/zabbix/snmptrap.png)
 
 [^1]: Cette documentation est directement inspirée de la production des collègues du BTS SIO du lycée Laetitia Bonaparte d'Ajaccio
