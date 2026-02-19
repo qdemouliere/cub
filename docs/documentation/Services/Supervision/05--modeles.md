@@ -1,4 +1,4 @@
-# Utilisation des modèles
+# V. Utilisation des modèles
 
 Zabbix propose un certain nombre de modèles directement exploitables pour superviser les hôtes présents sur votre réseau. Un modèle dispose en général d’une série d’éléments, déclencheurs, grahiques prêts à l’emploi et transposables à grande échelle. 
 
