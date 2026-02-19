@@ -30,7 +30,7 @@ Remote Engine ID          IP-addr    Port
 
 root@zabbix:~# nano /etc/snmp/snmptrapd.conf
 
-\# Il faut créer une authentification 
+# Il faut créer une authentification 
 createUser -e "0x800000090300A411BBD71F80" zabbix SHA etudiant_007 AES azerty2QWERTY
 
 authUser execute zabbix
