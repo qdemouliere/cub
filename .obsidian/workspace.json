@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/documentation/Cybersécurité/Wazhu/FICHE 1 – SIEM WAZUH – INSTALLATION.md",
+                "file": "docs/documentation/Cybersécurité/Bastion/Sans titre.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FICHE 1 – SIEM WAZUH – INSTALLATION"
+              "title": "Sans titre"
             }
           }
         ]
@@ -186,8 +186,10 @@
   },
   "active": "55d3f1112edd11af",
   "lastOpenFiles": [
-    "docs/documentation/Services/Supervision/01--intro.md",
     "docs/documentation/Cybersécurité/Wazhu/FICHE 1 – SIEM WAZUH – INSTALLATION.md",
+    "docs/documentation/Cybersécurité/Bastion/Sans titre.md",
+    "docs/documentation/Cybersécurité/Bastion",
+    "docs/documentation/Services/Supervision/01--intro.md",
     "docs/documentation/Services/Supervision/04--zabbixagent.md",
     "docs/documentation/Cybersécurité/Wazhu",
     "docs/documentation/Services/Supervision/08--carto.md",
@@ -229,8 +231,6 @@
     "docs/documentation/Services",
     "docs/documentation/Réseau/Cisco/0x--ACL.md",
     "docs/documentation/Réseau/Cisco",
-    "docs/documentation/Réseau",
-    "docs/documentation/DevOps/Versioning/3--Etckeeper.md",
-    "docs/documentation/DevOps/Versioning"
+    "docs/documentation/Réseau"
   ]
 }
