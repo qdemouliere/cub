@@ -186,6 +186,11 @@
   },
   "active": "08f3011fae9d70e4",
   "lastOpenFiles": [
+    "docs/documentation/Cybersécurité/Wazhu",
+    "docs/documentation/Services/Supervision/08--carto.md",
+    "docs/documentation/Services/Supervision/07--traps.md",
+    "docs/documentation/Services/Supervision/06--snmpv3.md",
+    "docs/documentation/Services/Supervision/05--modeles.md",
     "docs/documentation/Services/Supervision/03--notifications.md",
     "docs/documentation/Services/Supervision/02--supsimple.md",
     "docs/documentation/Services/Supervision/01--intro.md",
@@ -225,12 +230,7 @@
     "docs/documentation/Réseau/Cisco",
     "docs/documentation/Réseau",
     "docs/documentation/DevOps/Versioning/3--Etckeeper.md",
-    "docs/documentation/DevOps/Versioning/4--GithubPages.md",
-    "docs/documentation/DevOps/Versioning/2--versionning et git.md",
-    "docs/documentation/DevOps/Versioning/1--Introduction.md",
     "docs/documentation/DevOps/Versioning",
-    "docs/documentation/DevOps",
-    "docs/documentation/Cybersécurité/Stormshield/fiche13_vpn_ipsec.md",
-    "docs/documentation/Cybersécurité/Stormshield/fiche12_vpn_openvpn.md"
+    "docs/documentation/DevOps"
   ]
 }
