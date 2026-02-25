@@ -11,14 +11,9 @@
   - Wazuh-agent : https://documentation.wazuh.com/current/user-manual/agent/agent-enrollment/troubleshooting.html
 
   
-  Les exigences matérielles dépendent fortement du nombre de terminaux protégés et de charges de travail cloud. Ce nombre permet d'estimer la quantité de données à analyser et le nombre d'alertes de sécurité à stocker et indexer.
-
-  
+Les exigences matérielles dépendent fortement du nombre de terminaux protégés et de charges de travail cloud. Ce nombre permet d'estimer la quantité de données à analyser et le nombre d'alertes de sécurité à stocker et indexer.
 
 L’interface est en anglais. Un traducteur automatique du navigateur peut avoir été utilisé lors des captures d’écran.
-
-  
-
 ---
 
   
