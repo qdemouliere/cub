@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/documentation/Cybersécurité/Bastion/Sans titre.md",
+                "file": "docs/documentation/Cybersécurité/Bastion/FICHE 1 – BASTION GUACAMOLE – Installation - Debian 12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sans titre"
+              "title": "FICHE 1 – BASTION GUACAMOLE – Installation - Debian 12"
             }
           }
         ]
@@ -187,7 +187,7 @@
   "active": "55d3f1112edd11af",
   "lastOpenFiles": [
     "docs/documentation/Cybersécurité/Wazhu/FICHE 1 – SIEM WAZUH – INSTALLATION.md",
-    "docs/documentation/Cybersécurité/Bastion/Sans titre.md",
+    "docs/documentation/Cybersécurité/Bastion/FICHE 1 – BASTION GUACAMOLE – Installation - Debian 12.md",
     "docs/documentation/Cybersécurité/Bastion",
     "docs/documentation/Services/Supervision/01--intro.md",
     "docs/documentation/Services/Supervision/04--zabbixagent.md",
