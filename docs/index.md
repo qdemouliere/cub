@@ -5,7 +5,7 @@
 Bienvenue dans cette documentation pédagogique générée automatiquement à l'aide de MkDocs et hébergée sur GitHub Pages. Cette documentation a été créée dans le but de vous fournir les informations essentielles sur le contexte commun utilisé avec vos enseignants dans les bloc 2 et 3
 du BTS SIO SISR 2.
 
-Cette production est librement inspirée de [celle](https://github.com/lmeryFulbert/SportLudique2024-2025) de Ludovic Mery, professeur d'informatique en BTS SIO au lycée Fulbert de Chartres.
+Cette production est librement inspirée de [celle](https://github.com/lmeryFulbert/SportLudique2025-2026) de Ludovic Mery, professeur d'informatique en BTS SIO au lycée Fulbert de Chartres.
 
 ### Comment utiliser cette documentation
 
