@@ -1,0 +1,3684 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://qdemouliere.github.io/cub/documentation/Cybers%C3%A9curit%C3%A9/Stormshield/fiche11_infrastructure_cles_publiques_SNS/">
+      
+      
+        <link rel="prev" href="../fiche10_utilisateurs_authentification_SNS/">
+      
+      
+        <link rel="next" href="../fiche12_vpn_openvpn/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../media/cub/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Fiche 11 -- Infrastructures à clés pubiques (PKI) - Le contexte CUB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fiche-11-infrastructures-a-cles-pubiques-pki" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../.." title="Le contexte CUB" class="md-header__button md-logo" aria-label="Le contexte CUB" data-md-component="logo">
+      
+  <img src="../../../../media/cub/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Le contexte CUB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiche 11 -- Infrastructures à clés pubiques (PKI)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Le contexte CUB" class="md-nav__button md-logo" aria-label="Le contexte CUB" data-md-component="logo">
+      
+  <img src="../../../../media/cub/logo.png" alt="logo">
+
+    </a>
+    Le contexte CUB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contexte
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contexte
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contexte/01-presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Présentation du contexte CUB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contexte/02-schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schémas réseaux de l'entreprise CUB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contexte/03-infra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Description de l'infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../contexte/bonnespratiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Référentiel défini par la DSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adminsys
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Adminsys
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Adminsys/Linux/01--Commandes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mémo des commandes fondamentales sur Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Adminsys/Linux/02--OTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification TOTP sur Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Adminsys/Linux/03--OpenSSL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenSSL sous Debian GNU/Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2_1" id="__nav_3_1_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scripting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Adminsys/Windows/Scripting/1--Introduction%20a%20powershell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PowerShell - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cybersécurité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cybersécurité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bastion
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bastion
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Bastion/FICHE%201%20%E2%80%93%20BASTION%20GUACAMOLE%20%E2%80%93%20Installation%20-%20Debian%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FICHE 1 – BASTION GUACAMOLE – Installation   Debian 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stormshield
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stormshield
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commandesUtilesConsole_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CheatSheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche01_initialiser_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 01 -- Initialiser un Pare-feu SNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche02_priseEnMain_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 02 -- Prise en main d'un Pare-feu SNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche03_gestionJournaux_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 03 -- Traces, Journaux et supervision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche04_configurationReseau_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 04 -- Configuration du réseau
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche05_configurationObjetsReseaux_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 05 -- Configuration des Objets Réseau
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche06_configurationNat_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 06 -- Configuration du NAT/PAT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche07_filtrage_protocolaire_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 07-- Filtrage protocolaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche08_filtrage_applicatifSNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 08 -- Filtrage applicatif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche09_IDS_IPS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 09 -- Prévention d'intrusion IDS/IPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche10_utilisateurs_authentification_SNS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 10 -- Utilisateurs, authentification et portail captif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 11 -- Infrastructures à clés pubiques (PKI)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 11 -- Infrastructures à clés pubiques (PKI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des certificats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des certificats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecran-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écran de gestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ca-interne-et-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA interne et externe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CA interne et externe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca-interne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA interne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ca-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA externe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dune-autorite-de-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'une autorité de certification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dune-identite-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'une identité serveur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Création d&#39;une identité serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference-entre-les-certificats-pem-et-der" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence entre les certificats PEM et DER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Différence entre les certificats PEM et DER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificat-pem-privacy-enhanced-mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificat PEM (Privacy Enhanced Mail)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificat-der-distinguished-encoding-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificat DER (Distinguished Encoding Rules)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-et-gestion-dune-identite-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création et gestion d'une identité utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-identites-et-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des identités et certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-1-rappels-et-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document 1 : Rappels et vocabulaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-2-fonctionnalites-de-la-pki-de-stormshield" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document 2 : Fonctionnalités de la PKI de Stormshield
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document 2 : Fonctionnalités de la PKI de Stormshield">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentification-dutilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification d'utilisateurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentification-de-serveurs-et-ou-de-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification de serveurs (et / ou de clients)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentification-de-passerelles-ipsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification de passerelles IPSec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche12_vpn_openvpn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 12 -- VPN pour utilisateurs nomades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiche13_vpn_ipsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiche 13 -- VPN site à site
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wazhu
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wazhu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Wazhu/FICHE%201%20%E2%80%93%20SIEM%20WAZUH%20%E2%80%93%20INSTALLATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FICHE 1 – SIEM WAZUH – INSTALLATION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versioning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Versioning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Versioning/1--Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction à la gestion des révisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Versioning/2--versionning%20et%20git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des versions et Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Versioning/3--Etckeeper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des versions de /etc avec Etckeeper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevOps/Versioning/4--GithubPages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mise en place d'une documentation à l'aide de Markdown, Git, Mkdocs et GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cisco
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../R%C3%A9seau/Cisco/0x--ACL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Les ACL sur les équipements Cisco
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Services
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DNS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DNS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/1--Pr%C3%A9ambule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/2--Resolver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II - Serveur DNS récursif
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/3--Autority/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III - Serveur DNS maître faisant autorité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/4--Slave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV - Serveur DNS esclave faisant autorité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/5--Delegation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V - Délégation de zone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/6--Resolutioninverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VI - La résolution inverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/DNS/7--Tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VII - Tests et diagnostics DNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Services web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Services web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_2_1" id="__nav_3_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apache
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Apache
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/01--Generalites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Généralités concernant Apache 2 sous Debian GNU/Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/02--ConfBase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. Configuration de base de Apache sous Debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/03--Commandes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Principales commandes pour Apache 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/04--Htaccess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Protection et paramétrage d'un site par htaccess
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/05--Vhosts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V. Les Virtual Hosts sous Apache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/06--ActivationTLS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VI. Activation de TLS avec Apache 2.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Services%20web/Apache/07--References/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VII. Les ressources de référence à exploiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supervision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/01--intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I. Introduction à la supervision avec Zabbix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/02--supsimple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    II. Supervision simple d’un hôte à l’aide du protocole ICMP écho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/03--notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    III. Mise en place des notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/04--zabbixagent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IV. Supervision des hôtes à l'aide de l'agent Zabbix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/05--modeles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V. Utilisation des modèles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/06--snmpv3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VI. Supervision des équipements réseaux à l'aide du protocole SNMPv3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/07--traps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VII. Mise en place d’une supervision passive à l’aide de traps SNMP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Services/Supervision/08--carto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIII. Cartographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des certificats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des certificats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecran-de-gestion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Écran de gestion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ca-interne-et-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA interne et externe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CA interne et externe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca-interne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA interne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ca-externe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CA externe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dune-autorite-de-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'une autorité de certification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-dune-identite-serveur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création d'une identité serveur
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Création d&#39;une identité serveur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#difference-entre-les-certificats-pem-et-der" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Différence entre les certificats PEM et DER
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Différence entre les certificats PEM et DER">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificat-pem-privacy-enhanced-mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificat PEM (Privacy Enhanced Mail)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificat-der-distinguished-encoding-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificat DER (Distinguished Encoding Rules)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-et-gestion-dune-identite-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Création et gestion d'une identité utilisateur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-identites-et-certificats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestion des identités et certificats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-1-rappels-et-vocabulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document 1 : Rappels et vocabulaire
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-2-fonctionnalites-de-la-pki-de-stormshield" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document 2 : Fonctionnalités de la PKI de Stormshield
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Document 2 : Fonctionnalités de la PKI de Stormshield">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentification-dutilisateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification d'utilisateurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentification-de-serveurs-et-ou-de-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification de serveurs (et / ou de clients)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentification-de-passerelles-ipsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentification de passerelles IPSec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fiche-11-infrastructures-a-cles-pubiques-pki">Fiche 11 -- Infrastructures à clés pubiques (PKI)</h1>
+<h2 id="gestion-des-certificats">Gestion des certificats</h2>
+<p>Les pare-feu Stormshield intègrent les fonctions permettant la gestion
+des certificats.</p>
+<h3 id="ecran-de-gestion">Écran de gestion</h3>
+<ul>
+<li>Se rendre au menu <strong>CONFIGURATION / OBJETS / Certificats et PKI</strong></li>
+</ul>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000009060000043BE88116330D05225D.png" />
+<img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000000FC00000122AE6553BFFA3240A1.png" /></p>
+<p><strong>+Ajouter </strong>lance des assistants de configuration permettant d'ajouter
+des éléments dans les objets :</p>
+<ul>
+<li><strong>Autorité racine :</strong> permet de créer une autorité de certification
+    racine gérée par le firewall. Cette autorité peut être une
+    sous-autorité d'une PKI externe.</li>
+<li><strong>Sous-autorité</strong> :permet de créer une autorité de certification
+    dépendant d'une autre CA. L'autorité parente doit être gérée par le
+    boitier.</li>
+<li><strong>Identité </strong><em><strong>utilisateur</strong> </em>: permet de créer une identité
+    <em>utilisateur</em> dépendant d'une autorité de certification gérée par le
+    boitier.</li>
+<li>I<strong>dentité </strong><em><strong>serveur</strong> </em>: permet de créer une identité <em>serveur
+    </em>dépendant d'une autorité de certification gérée par le boitier.</li>
+<li><strong>Smartcard</strong> : permet de créer une identité Smartcard dépendant
+    d'une autorité de certification gérée par le boitier.</li>
+<li><strong>Importer un fichier</strong> : le fichier importé peut être une identité,
+    un certificat, une CRL.</li>
+</ul>
+<h3 id="ca-interne-et-externe">CA interne et externe</h3>
+<h4 id="ca-interne">CA interne</h4>
+<p>Cette fonctionnalité de gestion d'une infrastructure à clés publiques
+permet de répondre à un grand nombre de cas d'usage :</p>
+<ul>
+<li>
+<p><strong>Le pare-feu agit en tant qu'autorité de certification racine (root
+    CA) :</strong> le boîtier SNS permet de définir les chaînes de confiance
+    nécessaires à une authentification par certificat. Des autorités par
+    défaut sont disponibles pour signer les certificats utilisés par le
+    proxy SSL ou livrer les certificats nécessaires au fonctionnement du
+    VPN SSL. Son certificat d'autorité est auto-signé.</p>
+<p>Les fonctions proposées par le boîtier SNS permettent de répondre
+pleinement au rôle d'autorité de certification (création de
+certificat de différentes natures, signature de CSR, révocation de
+certificat et gestion de CRL).</p>
+</li>
+<li>
+<p><strong>Le pare-feu agit en tant que sous-autorité de certification :</strong> il
+    est possible de définir un boîtier SNS comme étant une sous-autorité
+    de certification d'une CA parente (gérée obligatoirement sur le même
+    boîtier). Le certificat de la sous-autorité est signé par l'autorité
+    parente (pas nécessairement une autorité racine), laquelle est une
+    autorité interne ou externe. Cela permet d'organiser plus finement
+    la répartition et la distribution des identités, par usages ou par
+    entités d'une même entreprise.</p>
+</li>
+</ul>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/100000000000061C000001D1D60696F5195A0ECF.png" /></p>
+<h4 id="ca-externe">CA externe</h4>
+<p>Dans le cadre d'usage d'une CA externe, les fonctionnalités proposées
+permettent essentiellement d'importer des certificats et de définir les
+relations de confiance pour divers usages :</p>
+<ul>
+<li>Import de certificats d'autorité de certification.</li>
+<li>Import de certificats d'équipements.</li>
+<li>Import de certificats et de clés privés d'équipements (fichiers
+    « .p12 » protégés ou pas par mot de passe).</li>
+</ul>
+<p>Le firewall agit en tant que PKI en permettant l'import de certificats,
+voire d'identités (protégées par des fichiers de type PKCS#12), émis par
+une CA externe</p>
+<p>Les certificats importés sont accessibles aux modules requérant une
+authentification par certificats (interface d'administration, VPN SSL,
+VPN Ipsec, etc.)</p>
+<h3 id="creation-dune-autorite-de-certification">Création d'une autorité de certification</h3>
+<ul>
+<li>Se rendre au menu <strong>CONFIGURATION / OBJETS / Certificats et PKI</strong>
+   <img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000004DD000003FC3B5278B18A4B2134.png" /></li>
+<li>Cliquer sur <strong>Ajouter </strong>puis sélectionner
+    <strong>Autorité racine</strong>.</li>
+<li>Renseigner un <strong>CN</strong> (obligatoire) : il s\'agit d\'un nom permettant
+    d'identifier votre autorité racine, dans la limite de 64 caractères.
+    Ce nom peut faire référence à une organisation, un utilisateur, un
+    serveur, une machine, etc.</li>
+<li>Renseigner un <strong>Identifiant</strong> (facultatif) : vous pouvez ici
+    indiquer un raccourci de votre CN, utile pour vos lignes de
+    commande.</li>
+<li>
+<p>renseigner les attributs de l\'autorité. Ces informations seront
+    présentes dans le certificat de l\'autorité ainsi que dans les
+    certificats qu\'elle émettra :</p>
+<ul>
+<li><strong>Organisation (O) :</strong> nom de votre société.</li>
+<li><strong>Unité d'organisation (OU) :</strong> \"branche\" de votre société.</li>
+<li><strong>Lieu (L)</strong> : ville dans laquelle est située votre société</li>
+<li><strong>État ou province (ST)</strong> : département géographique de votre
+    société.</li>
+<li><strong>Pays (C)</strong> : pays dans laquelle est située votre société</li>
+</ul>
+</li>
+<li>
+<p>Cliquer sur <strong>Suivant</strong>.</p>
+</li>
+<li>Saisir le mot de passe destiné à protéger l\'autorité racine et
+    confirmez-le. Une jauge indique le degré de robustesse de votre mot
+    de passe. Il est recommandé de combiner les lettres minuscules,
+    majuscules, les chiffres et les caractères spéciaux.</li>
+<li>Renseigner votre <strong>E-mail</strong> (facultatif) afin de recevoir un message
+    vous confirmant la création de votre autorité.</li>
+<li>
+<p>Modifier éventuellement des éléments du certificat :</p>
+</li>
+<li>
+<p>la valeur de la durée de validité (jours) conseillée des certificats
+    est de 365 jours (proposée par défaut). Ce champ correspond au
+    nombre de jours durant lesquels votre certificat d\'autorité et par
+    conséquent votre PKI seront valides. Cette date influe sur tous les
+    aspects de votre PKI. En effet, une fois ce certificat expiré, tous
+    les certificats utilisateurs le seront également. <strong>Cette valeur qui
+    ne doit pas excéder 3650 jours ne sera pas modifiable par la
+    suite</strong>.</p>
+</li>
+<li>Vous pouvez aussi modifier la Taille de clé (en bits) du certificat.
+    <em>Bien que les clés de grande taille soient plus efficaces, il est
+    déconseillé d'utiliser celles-ci avec les équipements d'entrée de
+    gamme, pour des raisons de temps de génération.</em></li>
+</ul>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000004C5000002C16136905EE6DA126A.png" /></p>
+<ul>
+<li>Cliquez sur <strong>Suivant </strong>puis encore sur<strong> Suivant.</strong></li>
+</ul>
+<p>Un résumé des informations saisies vous est présenté :</p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000004BD000003C1AEDA9AD770068B95.png" /></p>
+<ul>
+<li>Cliquer sur <strong>Terminer</strong>.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Résultat</p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000002220000010BD4FF63B43DC13A41.png" /></p>
+</div>
+<p>L'autorité est automatiquement ajoutée à l'arborescence des autorités,
+identités et certificats définis sur le firewall.</p>
+<p>Un clic sur l'autorité affiche ses informations détaillées dans la
+partie droite de l'écran.</p>
+<ul>
+<li>
+<p>Définir éventuellement par défaut l'autorité de certification</p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/100000000000023900000153CE892D3F02110A5C.png" /></p>
+</li>
+</ul>
+<h3 id="creation-dune-identite-serveur">Création d'une identité <em>serveur</em></h3>
+<p>Voir « fiche 12 -- Le VPN »</p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/100000000000019D0000008EA36B499059FF6902.png" /></p>
+<h4 id="difference-entre-les-certificats-pem-et-der">Différence entre les certificats PEM et DER</h4>
+<h6 id="certificat-pem-privacy-enhanced-mail">Certificat <strong>PEM</strong> (Privacy Enhanced Mail)</h6>
+<ul>
+<li><strong>Encodage</strong> : Le format <strong>PEM</strong> utilise un encodage <strong>Base64</strong>.</li>
+<li><strong>Structure</strong> : Le contenu est encadré par des balises :</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>-----BEGIN<span class="w"> </span>CERTIFICATE-----
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="o">(</span>contenu<span class="w"> </span>encodé<span class="w"> </span>en<span class="w"> </span>Base64<span class="o">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span>-----END<span class="w"> </span>CERTIFICATE-----
+</span></code></pre></div>
+<ul>
+<li><strong>Utilisation :</strong> Principalement utilisé pour les certificats SSL/TLS sur les serveurs web, ainsi que pour stocker des clés privées et des certificats intermédiaires.</li>
+<li><strong>Extension de fichier :</strong> Les fichiers PEM ont souvent l'une des extensions suivantes : .pem, .crt, .cer, ou .key.</li>
+<li><strong>Lisibilité :</strong> Il est lisible en texte brut et peut être ouvert avec n'importe quel éditeur de texte.</li>
+</ul>
+<h6 id="certificat-der-distinguished-encoding-rules">Certificat DER (Distinguished Encoding Rules)</h6>
+<ul>
+<li><strong>Encodage :</strong> Le format DER est binaire (non encodé en Base64).</li>
+<li><strong>Structure :</strong> Pas de balises, le fichier est stocké dans un format binaire pur.</li>
+<li><strong>Utilisation :</strong> Couramment utilisé dans des environnements où l'encodage Base64 n'est pas nécessaire, comme les applications Java.</li>
+<li><strong>Extension de fichier :</strong> Les fichiers DER ont généralement l'extension .der ou .cer.</li>
+<li><strong>Lisibilité :</strong> Non lisible en texte brut. Il ne peut pas être ouvert directement avec un éditeur de texte classique.</li>
+</ul>
+<h3 id="creation-et-gestion-dune-identite-utilisateur">Création et gestion d'une identité <em>utilisateur</em></h3>
+<p><strong>Première méthode</strong> à partir d'un utilisateur créé dans l'annuaire LDAP
+interne du firewall</p>
+<p>il est possible de générer une identité <em>utilisateur</em> <strong>directement
+depuis l'annuaire LDAP interne du firewall</strong>. Dans ce cas, le choix de
+l'autorité signataire se porte automatiquement sur la CA désignée par
+défaut.</p>
+<ul>
+<li>Se rendre au menu <strong>CONFIGURATION / UTILISATEURS / Utilisateurs</strong></li>
+<li>Sélectionner l'utilisateur puis cliquer sur <strong>CERTIFICAT</strong> puis
+    <strong>Créer l'identité</strong></li>
+</ul>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000003E50000005512FF62B7C2E89677.png" /></p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000003170000027612F20C4A7014415E.png" /></p>
+<ul>
+<li>Cliquer sur « Créer l'identité » ⇒ Le certificat de l'utilisateur
+    s'affiche</li>
+</ul>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/10000000000005E700000259CAA9F26E7BBC03AB.png" /></p>
+<p>Il est également visible via le menu <strong>OBJETS / CERTIFICATS et PKI</strong></p>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/1000000000000484000000CD59C69596D1CAD699.png" /></p>
+<p>Deuxième méthode</p>
+<ul>
+<li>Se rendre au menu <strong>CONFIGURATION / OBJETS / Certificats et PKI</strong></li>
+<li>Cliquer sur <strong>+Ajouter </strong>puis Identité Utilisateur.</li>
+<li>Renseigner :<ol>
+<li>un CN (obligatoire) : nom permettant d'identifier l\'utilisateur
+    dans la limite de 64 caractères.</li>
+<li>un Identifiant (facultatif) : vous pouvez ici indiquer un raccourci
+    de votre CN, utile pour vos lignes de commande (exemple : si le CN
+    est un couple Prénom+Nom, l\'identifiant peut correspondre aux
+    initiales du CN).</li>
+<li>l'adresse e-mail (obligatoire) de l\'utilisateur pour lequel vous
+    créez une identité.</li>
+</ol>
+</li>
+<li>Cliquer sur Suivant.</li>
+<li>Sélectionner l\'Autorité parente destinée à signer le certificat de
+    l\'identité.</li>
+<li>Renseigner le Mot de passe de l\'autorité parente.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Info</p>
+<p>Les attributs de l\'autorité sont automatiquement ajoutés. Ils seront
+présents dans le certificat utilisateur.</p>
+</div>
+<ul>
+<li>Cliquer sur Suivant.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Lorsque le firewall dispose d'un TPM et que celui-ci a été initialisé,
+cocher la case Protéger cette identité à l'aide du TPM pour enregistrer
+cette identité sur le TPM.</p>
+</div>
+<details class="info">
+<summary>TPM</summary>
+<p>Le TPM (Trusted Platform Module) est un composant matériel de sécurité qui permet de stocker et protéger les clés cryptographiques ainsi que d'autres données sensibles de manière sécurisée. Le TPM est conçu pour renforcer la sécurité des systèmes en fournissant des fonctionnalités comme l'authentification sécurisée et le chiffrement des données. Il est obligatoire pour Windows 11 désormais en version 2.0 (Puce TPM)</p>
+</details>
+<ul>
+<li>Modifier éventuellement des éléments du certificat : la valeur de la
+    durée de validité (jours) conseillée des certificats est de 365
+    jours (proposée par défaut). Vous pouvez aussi modifier la Taille de
+    clé (en bits) du certificat. <em>Bien que les clés de grande taille
+    soient plus efficaces, il est déconseillé d'utiliser celles-ci avec
+    les équipements d'entrée de gamme, pour des raisons de temps de
+    génération.</em></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Si <strong>l\'autorité utilisée pour générer le certificat est l'autorité par
+défaut</strong> du firewall ET si <strong>un utilisateur déclaré dans l'annuaire
+LDAP référence la même adresse e-mail</strong> que celle précisée à l'étape 3,
+vous pouvez associer automatiquement cette identité à l'utilisateur
+correspondant :</p>
+</div>
+<ul>
+<li>Cocher la case <strong>Publier cette identité dans l'annuaire LDAP</strong>,</li>
+<li>Saisissez deux fois un mot de passe destiné à protéger le conteneur
+    PKCS#12 de l'identité.</li>
+<li>Cliquer sur Suivant ⇒ Un résumé des informations saisies vous est
+    présenté.</li>
+<li>Cliquer sur Terminer.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Info</p>
+<p>L'identité est automatiquement ajoutée à l'arborescence des autorités,
+identités et certificats définis sur le firewall, sous son autorité
+parente.</p>
+</div>
+<h3 id="gestion-des-identites-et-certificats">Gestion des identités et certificats</h3>
+<p>Menu Télécharger</p>
+<p><strong>Certificat</strong> : le format d'export contient des données en base64
+(.pem) ou des données binaires (.der). Le fichier exporté contient le
+certificat du porteur mais également les certificats des autorités
+présentes dans la chaîne de confiance de ce certificat.</p>
+<p><strong>Identité</strong> : l'identité, puisqu'elle contient une clé privée, est
+sensible et son export doit être protégé par un mot de passe, lequel
+permet de chiffrer la clé privée qu'il contient. L'identité est pour
+rappel constituée de la clé privée du porteur, de son certificat (qui
+contient sa clé publique), et des certificats de la chaîne de confiance.
+Le fichier d'export est un container .pem ou un container PKCS#12 (ou
+.p12).</p>
+<h2 id="document-1-rappels-et-vocabulaire">Document 1 : Rappels et vocabulaire</h2>
+<details class="info">
+<summary>Infrastructure à clés publiques ou PKI (Public Key Infrastructure)</summary>
+<p>Infrastructure qui héberge les informations publiques (annuaire, CRL) et
+qui permet d'accéder aux certificats de l'organisation, d'effectuer un
+renouvellement de certificat, ou de le révoquer.</p>
+</details>
+<p>Un certificat peut contenir du texte (extensions .pem, .crt) ou des
+données binaires directement (extensions .cer, .der).</p>
+<p>La validité du certificat est remise en cause :</p>
+<ul>
+<li>à l'expiration de ce dernier (limitation dans le temps) ;</li>
+<li>à l'expiration de la CA ;</li>
+<li>en cas de perte ou de vol de la clé privée du propriétaire ;</li>
+<li>en cas de départ du propriétaire de la société.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Liste des certificats révoqués</p>
+<p>La <strong>CRL</strong> est un fichier signé par la CA, qui liste les numéros de série
+des certificats révoqués avant leur expiration. Cette liste doit être
+accessible publiquement pour permettre aux utilisateurs de s'assurer que
+les identités qui leur sont présentées sont encore valides.</p>
+</div>
+<p><img alt="" src="../../../../media/stormshield/fiches/fiche11_infrastructure_cles_publiques_SNS/Pictures/1000000000000129000000F6175BABAE176F6F19.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Stockage des identités numériques par la CA</p>
+<p>Lorsque la CA génère les bi-clés, il est simple de contrôler la
+robustesse des clés et de les sauvegarder, mais cela nécessite la mise
+en place d'une procédure sécurisée pour délivrer son identité à un
+utilisateur final. Il existe pour cela un container protégé standardisé
+nommé PKCS#12 qui contient traditionnellement : [clé privée du
+porteur + certificat du porteur (contenant sa clé publique) + certificat
+de la CA signataire].</p>
+</div>
+<h2 id="document-2-fonctionnalites-de-la-pki-de-stormshield">Document 2 : Fonctionnalités de la PKI de Stormshield</h2>
+<h3 id="authentification-dutilisateurs">Authentification d'utilisateurs</h3>
+<p>1. L'utilisateur mobile, ou l'administrateur de l'interface web,
+souhaitant s'authentifier auprès du firewall présente son certificat
+utilisateur, soit par son navigateur web, soit par son client VPN IPsec,</p>
+<p>2. Le firewall vérifie la validité du certificat et contrôle l'identité
+de l'utilisateur sur le serveur LDAP,</p>
+<p>3. Les politiques d'accès attachées à cet utilisateur peuvent alors lui
+être appliquées, pour permettre l'accès aux ressources réseau internes.</p>
+<h3 id="authentification-de-serveurs-et-ou-de-clients">Authentification de serveurs (et / ou de clients)</h3>
+<ol>
+<li>
+<p>Le serveur, lors de l'initialisation d'une session, présente son
+certificat serveur au client, lequel vérifie sa validité,</p>
+</li>
+<li>
+<p>Éventuellement, le client présente son certificat client au serveur,
+lequel vérifie sa validité. Lorsque cette étape est présente, il s'agit
+d'une session avec authentification mutuelle (c'est le cas par exemple
+d'une session TCP/TLS entre le firewall client et le serveur Syslog
+Stormshield Visibility Center),</p>
+</li>
+<li>
+<p>Après l'authentification, le client et le serveur négocient une clé
+de session.</p>
+</li>
+</ol>
+<h3 id="authentification-de-passerelles-ipsec">Authentification de passerelles IPSec</h3>
+<ol>
+<li>
+<p>Lors de la phase d'établissement du tunnel, le firewall qui initie
+le tunnel (Initiator) présente son certificat à la passerelle distante,
+laquelle vérifie sa validité,</p>
+</li>
+<li>
+<p>Le firewall qui répond (Responder) présente son certificat à la
+passerelle distante, laquelle vérifie sa validité,</p>
+</li>
+<li>
+<p>Outre les vérifications effectuées sur la validité des certificats
+présentés (intégrité, signature numérique, période de validité, etc.),
+le certificat de l'autorité de certification ayant signé le certificat
+de la passerelle distante doit appartenir au groupe de confiance de CA,
+'est-à-dire aux autorités de certification acceptées dans la politique VPN Ipsec,</p>
+</li>
+<li>
+<p>La vérification de l'identité de la passerelle distante permet de
+garantir que le tunnel est monté avec la passerelle identifiée par le
+certificat, ce point optionnel ne peut être défini qu'en CLI.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../fiche10_utilisateurs_authentification_SNS/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Fiche 10 -- Utilisateurs, authentification et portail captif">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Fiche 10 -- Utilisateurs, authentification et portail captif
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../fiche12_vpn_openvpn/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Fiche 12 -- VPN pour utilisateurs nomades">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Fiche 12 -- VPN pour utilisateurs nomades
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Licence CC 4.0 FR BY-NC-SA - 2025 D. Balny et Q. Demoulière - Lycée Paul-Louis Courier
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
