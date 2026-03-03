@@ -14,46 +14,6 @@
 Les exigences matérielles dépendent fortement du nombre de terminaux protégés et de charges de travail cloud. Ce nombre permet d'estimer la quantité de données à analyser et le nombre d'alertes de sécurité à stocker et indexer.
 L’interface est en anglais. Un traducteur automatique du navigateur peut avoir été utilisé lors des captures d’écran.
 
----
-
-
-## Sommaire
-
-- A. Installation
-
-  - A.1 Installation rapide
-
-  - A.2 Installation des composants
-
-    - A.2.1 Prérequis
-
-    - A.2.2 Indexeur
-
-    - A.2.3 Manager
-
-    - A.2.4 Filebeat
-
-    - A.2.5 Dashboard
-
-  - A.3 Docker Compose
-
-- B. Agents
-
-  - B.1 Groupes
-
-  - B.2 Installation agent
-
-    - B.2.1 Windows
-
-    - B.2.2 Linux
-
-  - B.3 Gestion groupes
-
-- C. Mise à jour
-
-  - C.1 Serveur
-
-  - C.2 Agents
 
 ---
 

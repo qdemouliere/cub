@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/documentation/Cybersécurité/Wazhu/FICHE 1 – SIEM WAZUH – INSTALLATION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "a61076fe9d88c3bf",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
+              "title": "FICHE 1 – SIEM WAZUH – INSTALLATION"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,8 +184,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a61076fe9d88c3bf",
+  "active": "55d3f1112edd11af",
   "lastOpenFiles": [
+    "docs/documentation/Cybersécurité/Bastion/FICHE 1 – BASTION GUACAMOLE – Installation - Debian 12.md",
+    "docs/documentation/Cybersécurité/Wazhu/FICHE 1 – SIEM WAZUH – INSTALLATION.md",
+    "docs/documentation/Cybersécurité/Bastion",
+    "docs/documentation/Services/Supervision/01--intro.md",
+    "docs/documentation/Services/Supervision/04--zabbixagent.md",
+    "docs/documentation/Cybersécurité/Wazhu",
+    "docs/documentation/Services/Supervision/08--carto.md",
+    "docs/documentation/Services/Supervision/07--traps.md",
+    "docs/documentation/Services/Supervision/06--snmpv3.md",
+    "docs/documentation/Services/Supervision/05--modeles.md",
+    "docs/documentation/Services/Supervision/03--notifications.md",
+    "docs/documentation/Services/Supervision/02--supsimple.md",
+    "docs/index.md",
     "docs/media/zabbix/trapsnmp3.png",
     "docs/media/zabbix/trapsnmp2.png",
     "docs/media/zabbix/trapsnmp1.png",
@@ -209,7 +209,6 @@
     "docs/media/zabbix/services1.png",
     "docs/media/zabbix/notifications9.png",
     "docs/media/zabbix/notifications8.png",
-    "docs/media/zabbix/notifications7.png",
     "docs/media/zabbix",
     "docs/documentation/Services/Services web/Apache/07--References.md",
     "docs/documentation/Services/Services web/Apache/06--ActivationTLS.md",
@@ -218,32 +217,20 @@
     "docs/documentation/Services/Services web/Apache/03--Commandes.md",
     "docs/documentation/Services/Services web/Apache/02--ConfBase.md",
     "docs/documentation/Services/Services web/Apache/01--Generalites.md",
-    "docs/documentation/Services/Supervision/08--carto.md",
-    "docs/documentation/Services/Supervision/07--traps.md",
-    "docs/documentation/Services/Supervision/06--snmpv3.md",
-    "docs/documentation/Services/Supervision/05--modeles.md",
-    "docs/documentation/Services/Supervision/04--zabbixagent.md",
-    "docs/documentation/Services/Supervision/03--notifications.md",
-    "docs/documentation/Services/Supervision/02--supsimple.md",
-    "docs/documentation/Services/Supervision/01--intro.md",
     "docs/documentation/Services/Services web/Apache",
     "docs/documentation/Services/DNS/7--Tests.md",
     "docs/documentation/Services/DNS/6--Resolutioninverse.md",
     "docs/documentation/Services/DNS/5--Delegation.md",
     "docs/documentation/Services/DNS/4--Slave.md",
-    "docs/documentation/Services/DNS/3--Autority.md",
     "docs/documentation/Services/DNS/2--Resolver.md",
+    "docs/documentation/Services/DNS/3--Autority.md",
     "docs/documentation/Services/DNS/1--Préambule.md",
-    "docs/documentation/Services/Supervision",
     "docs/documentation/Services/Services web",
+    "docs/documentation/Services/Supervision",
     "docs/documentation/Services/DNS",
     "docs/documentation/Services",
     "docs/documentation/Réseau/Cisco/0x--ACL.md",
     "docs/documentation/Réseau/Cisco",
-    "docs/documentation/Réseau",
-    "docs/documentation/DevOps/Versioning/4--GithubPages.md",
-    "docs/documentation/DevOps/Versioning/3--Etckeeper.md",
-    "docs/documentation/DevOps/Versioning",
-    "docs/documentation/DevOps"
+    "docs/documentation/Réseau"
   ]
 }
