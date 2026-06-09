@@ -55,6 +55,10 @@ nameserver 8.8.8.8
 !!! Warning  "Attention"
     Lorsque le service Unbound sera opérationnel, remplacer 8.8.8.8 par 127.0.0.1 et ajouter ensuite le second serveur récursif produit par votre binôme. 
 
+!!! Warning  "Attention"
+    Avec Debian 13, si le service dhcpd est présent, il n'est pas possible d'éditer directement le fichier /etc/resolv.conf qui est en lecture seul. Ainsi, il faudra renseigner les paramètres fournis ci-dessus dans le fichier /etc/resolv.conf.head. 
+
+
 ## 4. Prendre en compte les modifications des paramètres réseaux
 
 ```bash
