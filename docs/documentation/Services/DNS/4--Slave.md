@@ -156,7 +156,7 @@ sudoedit /etc/bind/named.conf
 
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
-include "/etc/bind/named.conf.default-zones";
+include "/etc/bind/named.conf.root-hints";
 
 // Ajout du fichier de parametrage de la journalisation du service BIND
 include "/etc/bind/named.conf.log";
