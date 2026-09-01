@@ -13,7 +13,7 @@ Les paramètres controlés sont:
 Les ACL peuvent être appliquées sur le trafic entrant ou sortant. Il y a deux actions: 
 
 * soit le trafic est interdit, 
-* soit le trafic est autorisé. 
+* soit le trafic est autorisé.. 
 
 !!! Warning  "Attention"
     Les ACL sont prises en compte de façon séquentielle. Il faut donc placer les instructions les plus précises en premier et l'instruction la plus générique en dernier. Une fois une ACL générée, une règle implicite finale est appliquée et elle interdit tout le trafic.
