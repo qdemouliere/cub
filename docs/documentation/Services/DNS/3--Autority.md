@@ -129,11 +129,16 @@ sudo cat /etc/bind/named.conf
 
 ```bash
 // This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian for information on the
+// structure of BIND configuration files in Debian, *BEFORE* you customize
+// this configuration file.// This is the primary configuration file for the BIND DNS server named.
+
 // If you are just adding zones, please do that in /etc/bind/named.conf.local
 
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
-include "/etc/bind/named.conf.default-zones";
+include "/etc/bind/named.conf.root-hints";
 ```
 
 Le fichier /etc/bind/named.conf est le fichier de configuration global du service DNS. Il est possible d'y renseigner tous les paramètres de configuration du service.
@@ -142,7 +147,7 @@ Sous Debian, il a été décidé dans un souci de lisibilité, de scinder la con
 
 * Le fichier named.conf.options est utilisé pour déclarer les options de configuration liées à Bind.
 * Le fichier named.conf.local sert à déclarer les zones nouvellement créées.
-* Le fichier named.conf.default-zones contient les déclarations de fichier de zone concernant la racine DNS et la boucle locale.
+* Le fichier named.conf.root-hints contient les déclarations de fichier de zone concernant la racine DNS et la boucle locale.
 * Le fichier named.conf.log n'existe pas mais vous permettra de gérer la journalisation de votre service dans un fichier texte dédié.
 
 ```bash
@@ -281,10 +286,16 @@ sudoedit /etc/bind/named.conf
 
 ```bash
 // This is the primary configuration file for the BIND DNS server named.
+//
+// Please read /usr/share/doc/bind9/README.Debian for information on the
+// structure of BIND configuration files in Debian, *BEFORE* you customize
+// this configuration file.// This is the primary configuration file for the BIND DNS server named.
+
 // If you are just adding zones, please do that in /etc/bind/named.conf.local
+
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
-include "/etc/bind/named.conf.default-zones";
+include "/etc/bind/named.conf.root-hints";
 
 // Ajout du fichier de parametrage de la journalisation du service BIND
 include "/etc/bind/named.conf.log";
