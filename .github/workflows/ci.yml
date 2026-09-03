@@ -25,5 +25,10 @@ jobs:
           path: ~/.cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
+      
+      - name: Declaration DNS
+      - run: echo "cubdocumentation.sioplc.fr" > docs/CNAME
+      
       - run: mkdocs gh-deploy --force
+
