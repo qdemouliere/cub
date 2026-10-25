@@ -3,217 +3,190 @@
 ## 1. Configurations générales
 
 
-**Passer du mode utilisateur au mode privilège **
+**Passer du mode utilisateur au mode privilège**
 
+```
+Router> enable
 
-*Router\> enable*
-
-*Router\#*
-
+Router#
+```
 
 **Passer du mode privilège au mode configuration**
 
+```
+Router# configure terminal
 
-*Router\# configure terminal*
-
-*Router(config)\#*
-
+Router(config)#
+```
 
 **Changer le nom de l'équipement**
 
-
-*Router(config)\# hostname Rw-B315-qd*
-
+```
+Router(config)# hostname Rw-B315-qd
+```
 
 **Empêcher les recherches DNS indésirables**
 
+```
+Router(config)# no ip domain-lookup
+```
 
-*Router(config)\# no ip domain-lookup*
+**Mettre un mot de passe pour le passage en mode privilège en clair ou haché**
 
+```
+Router(config)# enable password monmotdepasse 
 
-**Mettre un mot de passe pour le passage en mode privilège en clair ou haché **
-
-
-*Router(config)\# enable password monmotdepasse *
-
-*Ou*
-
-*Router(config)\# enable secret monmotdepasse *
-
+Router(config)# enable secret monmotdepasse 
+```
 
 **Mettre un mot de passe pour les accès par le câble console**
 
-
-*Router(config)\# line console 0*
-
-*Router(config-line)\# password rootroot*
-
-*Router(config-line)\# login*
-
+```
+Router(config)# line console 0
+Router(config-line)# password rootroot
+Router(config-line)# login
+```
 
 **Mettre un mot de passe pour l’accès Telnet avec 5 sessions simultanées**
 
-
-Router(config)\# line vty 0 4
-
-Router(config-line)\# transport input telnet
-
-Router(config-line)\# password rootroot
-
-Router(config-line)\# login
-
+```
+Router(config)# line vty 0 4
+Router(config-line)# transport input telnet
+Router(config-line)# password rootroot
+Router(config-line)# login
+```
 
 **Mettre en place un message du jour**
 
-
-*Router(config)\# banner motd \# Welcome to available users \#*
-
+```
+Router(config)# banner motd # Welcome to available users #
+```
 
 **Chiffrer l’ensemble des mots de passe présents dans le fichier de configuration du routeur via le chiffre de Vigenère**
 
-
-*Router(config)\# service password-encryption*
-
+```
+Router(config)# service password-encryption
+```
 
 **Définir une taille minimum pour les mots de passe utilisés sur le système (ici 10 caractères)**
 
-
-*Router(config)\# security passwords min-length 10*
-
+```
+Router(config)# security passwords min-length 10
+```
 
 Lorsque vous souhaitez annuler une commande tapée précédemment il suffit de la retaper en rajoutant un **no** devant.
 
 
-**Sauvegarde de la configuration en cours vers la configuration lancée au démarrage **
+**Sauvegarde de la configuration en cours vers la configuration lancée au démarrage**
 
-
-*Router\# copy running-config startup-config*
+```
+Router# copy running-config startup-config
 
 Autre possibilité plus rapide :
 
-*Router\# write*
-
+Router# write
+```
 
 **Sauvegarde de la configuration vers un serveur TFTP**
 
-
-*Router\# copy startup-config tftp*
-
+```
+Router# copy startup-config tftp
+```
 
 **Voir la configuration de l'équipement**
 
-
-*Router\# show running-config ou show startup-config*
-
+```
+Router# show running-config ou show startup-config
+```
 
 ## 2. Configurations spécifiques au commutateur
 
 
-**Observer la table de commutation (correspondance port - adresse** **MAC**)
+**Observer la table de commutation (correspondance port - adresse MAC)**
 
-
-*Switch\# show mac-address-table*
-
+```
+Switch# show mac-address-table
+```
 
 **Affecter une adresse IP au switch**
 
-
-*Switch(config)\# interface vlan 1*
-
-*Switch(config-if)\# ip address 192.0.2.10 255.255.255.0*
-
-*Switch(config-if)\# no shutdown*
-
+```
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.0.2.10 255.255.255.0
+Switch(config-if)# no shutdown*
+```
 
 **Création d’un VLAN**
 
-
-*Switch(config)\#  vlan 10*
-
-*Switch(config-vlan)\# name informatique*
-
-*Switch(config-vlan)\# exit*
-
+```
+Switch(config)# vlan 10
+Switch(config-vlan)# name informatique
+Switch(config-vlan)# exit
+```
 
 **Affectation d’un port du commutateur dans un VLAN (mode access)**
 
-
-*Switch(config)\# interface FastEthernet 0/24*
-
-*Switch(config-if)\# switchport mode access*
-
-*Switch(config-if)\# switchport access vlan 10*
-
-*Switch(config-if)\# exit*
-
+```
+Switch(config)# interface FastEthernet 0/24
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config-if)# exit
+```
 
 **Affectation d’un groupe de ports dans un VLAN (mode access)**
 
-
-*Switch(config)\# interface range FastEthernet 0/20-24*
-
-*Switch(config-range-if)\# switchport mode access*
-
-*Switch(config-range-if)\# switchport access vlan 10*
-
-*Switch(config-range-if)\# exit*
-
+```
+Switch(config)# interface range FastEthernet 0/20-24
+Switch(config-range-if)# switchport mode access
+Switch(config-range-if)# switchport access vlan 10
+Switch(config-range-if)# exit
+```
 
 **Configuration d’un port permettant de faire transiter des trames étiquetées 802.1q appartenant à plusieurs VLAN**
 
-
-*Switch(config)\# interface FastEthernet 0/24*
-
-*Switch(config-if)\# switchport mode trunk*
-
-*Switch(config-if)\# switchport trunk allowed vlan all ou numéro ou plage-de-numéro*
-
-*Switch(config-if)\# exit*
-
+```
+Switch(config)# interface FastEthernet 0/24
+Switch(config-if)# switchport mode trunk
+Switch(config-if)# switchport trunk allowed vlan all ou numéro ou plage-de-numéro
+Switch(config-if)# exit
+```
 
 Il est également possible d’affecter une rangée de ports en trunk avec la commande **interface range** comme dans l’exemple précédent pour les ports en mode access.
 
+??? Warning "Attention"
+    **Attention !** Dans le cas de la configuration d’un commutateur de niveau 3 **Cisco 3750**, il est nécessaire de taper une commande supplémentaire avec la commande *switchport mode trunk*.
 
-**Attention !** Dans le cas de la configuration d’un commutateur de niveau 3 **Cisco 3750**, il est nécessaire de taper une commande supplémentaire avec la commande *switchport mode trunk*.
-
-
-*Switch(config-if)\# switchport trunk encapsulation dot1q*
-
-*Switch(config-if)\# switchport mode trunk*
-
+```
+Switch(config-if)# switchport trunk encapsulation dot1q
+Switch(config-if)# switchport mode trunk
+```
 
 **Définir un VLAN natif sur un port configuré en mode trunk/tag**
 
-
-*Switch(config)\# interface FastEthernet 0/24*
-
-*Switch(config-if)\# switchport mode trunk native vlan \<1-4094\>*
-
+```
+Switch(config)# interface FastEthernet 0/24
+Switch(config-if)# switchport mode trunk native vlan <1-4094>
+```
 
 **Visualisation des informations liées aux VLAN sur le commutateur**
 
+```
+Switch# show vlan
+Switch# show interfaces switchport
+Switch# show interfaces trunk
+Switch# show ip interface
+```
 
-*Switch\# show vlan*
-
-*Switch\# show interfaces switchport*
-
-*Switch\# show interfaces trunk*
-
-*Switch\# show ip interface*
-
-
-***Configuration du mode port-security sur un port du commutateur**
+**Configuration du mode port-security sur un port du commutateur**
 
 
-***Activation de port-security**
+**Activation de port-security**
 
-
-*Switch(config)\# interface FastEthernet 0/1*
-
-*Switch(config-if)\# switchport mode access*
-
-*Switch(config-if)\# switchport port-security*
-
+```
+Switch(config)# interface GigabitEthernet 0/1
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport port-security
+```
 
 ***Définition des adresses MAC autorisées**
 
