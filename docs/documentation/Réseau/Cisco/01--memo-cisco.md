@@ -8,7 +8,6 @@
 
 ```
 Router> enable
-
 Router#
 ```
 
@@ -16,7 +15,6 @@ Router#
 
 ```
 Router# configure terminal
-
 Router(config)#
 ```
 
