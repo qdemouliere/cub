@@ -34,7 +34,6 @@ Router(config)# no ip domain-lookup
 
 ```
 Router(config)# enable password monmotdepasse 
-
 Router(config)# enable secret monmotdepasse 
 ```
 
@@ -443,9 +442,9 @@ Router# undebug all
 
 ```
 Router(config)# interface type number
-Router (config-if)# ip nat inside
-Router (config)# interface type number
-Router (config-if)# ip nat outside
+Router(config-if)# ip nat inside
+Router(config)# interface type number
+Router(config-if)# ip nat outside
 ```
 
 **II. Définir les adresses locales soumises au NAT dans l’optique des les masquer pour qu’elles puissent avoir accès à l’extérieur et que l’extérieur ne voit que l’adresse du routeur.**
@@ -497,7 +496,7 @@ RouterA(config-if)# standby 10 preempt
 **Configuration du routeur B**
 
 ```
-RouterB(config)# int f0/1*
+RouterB(config)# int f0/1
 RouterB(config-if)# ip address 192.0.2.3 255.255.255.0
 RouterB(config-if)# no shutdown
 RouterB(config-if)# standby 10 ip 192.0.2.1
@@ -531,8 +530,8 @@ Router(config)# config-register 0x2102
 Router(config)# end
 Router# write erase
 Router# reload
-System configuration has been modified. Save? \[yes/no\]: n
-Proceed with reload? \[confirm\]
+System configuration has been modified. Save? [yes/no]:n
+Proceed with reload? [confirm]
 ```
 
 ### 4.2 Démarrer en mode rommon et restaurer les paramètres d’usine 
@@ -550,15 +549,15 @@ rommon1> confreg 0x2142 (il vous reste à redémarrer manuellement l’équipeme
 Il est possible que votre routeur ou commutateur soit en mode lecture seule. Pour le vérifier, taper la commande show version et regarder si la configuration du registre est 0x2142. Si c’est le cas, il faut la modifier en 0x2102.
 
 ```
-Router#configure terminal
-Router(config)#config-register 0x2102
+Router# configure terminal
+Router(config)# config-register 0x2102
 Router(config)# do write
 Router(config)#do reload
 ```
 ou en mode rommon
 
 ```
-rommon1\> confreg 0x2102 (il vous reste à redémarrer l’équipement).
+rommon1> confreg 0x2102 (il vous reste à redémarrer l’équipement).
 
 ```
 
@@ -575,10 +574,10 @@ Soit si vous êtes déjà connecté en console :
 
 ```
 switch# delete vlan.dat
-Delete flash:/vlan.dat? [confirm]*
+Delete flash:/vlan.dat? [confirm]
 switch# erase startup-config
 switch# reload
-System configuration has been modified. Save? [yes/no]: n
+System configuration has been modified. Save? [yes/no]:n
 Proceed with reload? [confirm]
 ```
 
