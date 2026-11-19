@@ -80,20 +80,20 @@ Si l'ACL doit être mofifiée, il sera nécessaire de supprimer celle-ci puis de
 
 **Création d’une ACL standard**
 
-
-*Router(config)\# access-list numéro-liste-accès \{deny|permit\} adresse-source \[masque-source\] \[log\]*
-
+```bash
+Router(config)# access-list numéro-liste-accès {deny|permit} adresse-source [masque-source] [log]
+```
 
 **Création d’une ACL étendue**
 
-
-*Router(config)\# access-list numéro-liste-accès \{deny|permit\} protocole adresse-source masque-source \[opérateur port\] adresse-destination masque-destination \[opérateur port\] \[log\]*
-
+```bash
+Router(config)# access-list numéro-liste-accès {deny|permit} protocole adresse-source masque-source [opérateur port] adresse-destination masque-destination [opérateur port] [log]
+```
 
 Où protocole (IPv4) peut être :
 
 
-- \<0-255\> An IP protocol number
+- <0-255> An IP protocol number
 
 - ahp Authentication Header Protocol
 
@@ -140,37 +140,23 @@ Où le paramètre “port” peut prendre une valeur nominative ou numéraire : 
 
 Les ACLs nommées se distinguent par un nom. Il faut spécifier le type standard ou extended en IPv4. Les ACLs IPv6 sont d’office “extended” de telle sorte que le paramètre disparaît des commandes. Les règles s’incrémentent d’un numéro d’ordre (tous les 10). Cet ID permet d’insérer des règles dans une liste.
 
-
-*(config)\# ip access-list standard ACL\_IPv4\_STD*
-
-*(config-std-nacl)\#permit | deny ?*
-
-*(config)\#exit*
-
-*(config)\#ip access-list extended ACL\_IPv4\_EXT*
-
-*(config-ext-nacl)\#permit | deny ?*
-
-*(config)\#exit*
-
-*(config)\#ipv6 access-list ACL\_IPv6*
-
-*(config-ipv6-acl)\#permit | deny ?*
-
+```bash
+(config)# ip access-list standard ACL_IPv4_STD
+(config-std-nacl)#permit | deny ?
+(config)#exit
+```
 
 Par exemple
 
+```bash
+(config)# ip access-list extended IPv4_LAN
+(config-ext-nacl)#
+permit tcp 192.0.2 0.0.0.255 any eq 80
+permit tcp 192.0.2.0 0.0.0.255 any eq 443
+```
 
-*(config)\# ip access-list extended IPv4\_LAN*
-
-*(config-ext-nacl)\#*
-
-*permit tcp 192.0.2 0.0.0.255 any eq 80*
-
-*permit tcp 192.0.2.0 0.0.0.255 any eq 443*
-
-
-**Attention !** Lorsque l’on génère des ACL, il est obligatoire de fournir un masque générique (wildcard mask ou masque de filtrage) et non un masque de sous-réseau. On parle aussi de masque inversé.
+!!! Warning  "Attention"
+    **Attention !** Lorsque l’on génère des ACL, il est obligatoire de fournir un masque générique (wildcard mask ou masque de filtrage) et non un masque de sous-réseau. On parle aussi de masque inversé.
 
 
 Exemple :
@@ -180,37 +166,32 @@ Pour un masque de sous-réseau 255.255.255.0, le masque générique attendu sera
 
 **Visualiser les ACL déjà présentes**
 
-
-*Router\# show access-lists*
-
+```bash
+Router# show access-lists
+```
 
 **Application des ACL**
 
 
 Une ACL une fois créée s’applique sur une interface en entrée ou en sortie.
 
-
-*Router(config)\# int f0/0*
-
-*Router(config-if)\#ip access-group IPv4\_LAN in|out*
-
+```bash
+Router(config)# int g0/0
+Router(config-if)#ip access-group IPv4_LAN in|out
+```
 
 **Suivi de l’état des connexions**
 
 
 **Attention !** Le filtrage avec les ACL sur un équipement Cisco n’est pas stateful. Ainsi, il faudra s’assurer que les réponses à une connexion préalablement établie soient bien autorisées sur les interfaces correspondantes.
 
-
-*(config)\# ip access-list extended IPv4\_SERVEURS*
-
-*(config-ext-nacl)\#*
-
-*permit tcp any any established*
-
-*permit udp host 192.0.2.50 eq 53 any*
-
-*permit icmp any any echo-reply*
-
+```bash
+(config)# ip access-list extended IPv4_SERVEURS
+(config-ext-nacl)#
+permit tcp any any established
+permit udp host 192.0.2.50 eq 53 any
+permit icmp any any echo-reply
+```
 
 **Affichage de la liste de contrôle :**
 
