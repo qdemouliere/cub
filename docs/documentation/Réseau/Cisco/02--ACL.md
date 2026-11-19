@@ -52,7 +52,7 @@ Il est possible de nommer les ACL. Dans ce cas, on précisera dans la commande s
 (config)#ip access-list extended ACL_VLAN_Admin
 ```
 
-## 3.Notion de masque générique (wildcard mask)
+## 2.Notion de masque générique (wildcard mask)
 
 Les ACL utilisent un masque permettant de sélectionner des plages d'adresses.
 
@@ -64,7 +64,7 @@ Sur le couple suivant: 0.0.0.0 0.0.0.0, toutes les adresses sont concernées (an
 
 **Exemple** : Le masque 255.255.255.128 donnera comme wildcard mask 0.0.0.127
 
-## 4. Comment appliquer les ACL ?
+## 3. Comment appliquer les ACL ?
 
 On crée l'ACL puis ensuite on applique l'ACL à une interface en entrée ou en sortie (in ou out).
 
@@ -75,7 +75,7 @@ Si l'ACL doit être mofifiée, il sera nécessaire de supprimer celle-ci puis de
 (config-subif)#ip access-group IPv4_LAN in
 ```
 
-## 5. Mise en place des ACL Cisco sur un routeur ou commutateur layer 3
+## 4. Mise en place des ACL Cisco sur un routeur ou commutateur layer 3
 
 
 **Création d’une ACL standard**
@@ -219,7 +219,7 @@ R2(config-if)#no ip access-group reseau-secretariat out
 R2(config-if)#
 ```
 
-## 6. Gestion de l'ordre de priorité des règles dans une ACL
+## 5. Gestion de l'ordre de priorité des règles dans une ACL
 
 ??? Warning "Attention"
     Comme dans tout système de filtrage, l'ordre des règles est primordial. Sur les équipements Cisco, les 1ères règles définies dans une ACL prendront le pas sur les suivantes exactement comme dans un tableau ou une matrice réalisés en amont.
